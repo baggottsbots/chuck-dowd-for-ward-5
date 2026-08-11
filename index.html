@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/chuck-dowd-for-ward-5/">
+<!-- BASE:END -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+
+<!-- SEO Meta Tags -->
+<title>Vote for Chuck Dowd for Ward 5 | Hilton Head Island Campaign</title>
+<meta name="description" content="Professional political campaign landing page for Chuck Dowd for Ward 5 on Hilton Head Island, highlighting leadership, public safety, smart transportation, and community commitment." />
+<meta property="og:title" content="Vote for Chuck Dowd for Ward 5 | Hilton Head Island Campaign" />
+<meta property="og:description" content="Professional political campaign landing page for Chuck Dowd for Ward 5 on Hilton Head Island, highlighting leadership, public safety, smart transportation, and community commitment." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vote for Chuck Dowd for Ward 5 | Hilton Head Island Campaign" />
+<meta name="twitter:description" content="Professional political campaign landing page for Chuck Dowd for Ward 5 on Hilton Head Island, highlighting leadership, public safety, smart transportation, and community commitment." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-msp78dfd-0k0fk";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=6102');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='64suVhYKY4';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='64suVhYKY4';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <!-- ============================================================================ -->
+  <!-- NAVBAR: Simple campaign header with anchor navigation                        -->
+  <!-- ============================================================================ -->
+  <nav data-section="navbar" class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-between gap-4">
+      <a href="#hero" class="group inline-flex items-center gap-3 font-bold tracking-tight text-slate-900">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--navy)] text-white shadow-md ring-4 ring-blue-50">CD</span>
+        <span class="leading-tight">
+          <span class="block text-[var(--navy)] text-base sm:text-lg">Chuck Dowd</span>
+          <span class="block text-xs sm:text-sm font-medium text-slate-600">for Ward 5</span>
+        </span>
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-sm font-semibold">
+        <a href="#about" class="text-slate-600 transition hover:text-[var(--navy)]">About</a>
+        <a href="#platform" class="text-slate-600 transition hover:text-[var(--navy)]">Platform</a>
+        <a href="#supporters" class="inline-flex items-center rounded-full bg-[var(--forest)] px-4 py-2 text-white shadow-sm transition hover:bg-emerald-800">Support Chuck</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ============================================================================ -->
+    <!-- HERO SECTION: Main campaign introduction and portrait                        -->
+    <!-- ============================================================================ -->
+    <section data-section="hero" id="hero" class="brand-gradient overflow-hidden">
+  <div class="relative w-full">
+    <img
+      src="https://paymegpt.com/objects/quick-uploads/2/e959ef045954644a.png"
+      alt="Professional headshot of Chuck Dowd, candidate for Ward 5 on Hilton Head Island"
+      class="h-[560px] w-full object-contain object-center bg-white sm:h-[680px] lg:h-[820px]"
+    />
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 md:px-8 lg:px-12 lg:py-14">
+    <div class="max-w-4xl">
+      <div class="inline-flex items-center rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-slate-800 ring-1 ring-slate-200 shadow-sm">
+        Hilton Head Island • Ward 5 • Leadership You Can Trust
+      </div>
+
+      <h1 class="mt-5 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-7xl">
+        Vote for Chuck Dowd for Ward 5
+      </h1>
+
+      <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-700 sm:text-xl">
+        Chuck Dowd brings a lifetime of service, command experience, and practical problem-solving to the challenges facing Hilton Head Island. His campaign is rooted in public safety, smarter transportation solutions, and a steadfast commitment to the community he serves.
+      </p>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="#supporters" class="inline-flex items-center justify-center rounded-xl bg-[var(--navy)] px-6 py-3.5 font-semibold text-white shadow-lg shadow-blue-950/15 transition hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:ring-offset-2 focus:ring-offset-slate-50">
+          Join the Campaign
+        </a>
+        <a href="#platform" class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3.5 font-semibold text-slate-900 shadow-sm transition hover:border-slate-400 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:ring-offset-2 focus:ring-offset-slate-50">
+          See the Platform
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+      <div class="rounded-2xl bg-white/90 p-5 ring-1 ring-slate-200 card-glow transition hover:-translate-y-0.5">
+        <p class="text-sm font-semibold uppercase tracking-wide text-[var(--forest)]">35 Years</p>
+        <p class="mt-1 text-sm leading-6 text-slate-700">of public service in the NYPD, culminating as Assistant Chief.</p>
+      </div>
+      <div class="rounded-2xl bg-white/90 p-5 ring-1 ring-slate-200 card-glow transition hover:-translate-y-0.5">
+        <p class="text-sm font-semibold uppercase tracking-wide text-[var(--navy)]">9/11 & Sandy</p>
+        <p class="mt-1 text-sm leading-6 text-slate-700">commanded NYC 911 operations in major crises.</p>
+      </div>
+      <div class="rounded-2xl bg-white/90 p-5 ring-1 ring-slate-200 card-glow transition hover:-translate-y-0.5">
+        <p class="text-sm font-semibold uppercase tracking-wide text-[var(--forest)]">FirstNet</p>
+        <p class="mt-1 text-sm leading-6 text-slate-700">board member focused on resilient communications.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 rounded-3xl bg-white/90 p-6 ring-1 ring-slate-200 shadow-xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--forest)]">Experienced • Measured • Ready to Serve</p>
+      <p class="mt-2 max-w-4xl text-base leading-7 text-slate-700">
+        Leadership shaped by crisis command, modern communications, and a deep respect for community needs.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- ============================================================================ -->
+    <!-- ABOUT SECTION: Background and experience                                     -->
+    <!-- ============================================================================ -->
+    <section data-section="about" id="about" class="brand-gradient">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:px-8 lg:px-12">
+        <div class="grid items-center gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <div class="inline-flex items-center rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-forest shadow-sm ring-1 ring-slate-200 backdrop-blur">
+              About Chuck Dowd
+            </div>
+            <h2 class="mt-6 text-4xl font-bold tracking-tight text-slate-950 text-shadow-soft sm:text-5xl">
+              A proven leader with real-world command experience
+            </h2>
+            <p class="mt-5 max-w-xl text-lg leading-8 text-slate-700">
+              Chuck Dowd spent 35 years serving the people of New York City, retiring as an NYPD Assistant Chief. He commanded the NYC 911 system during some of the most challenging events in modern American history, including September 11th and Hurricane Sandy.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-200 card-glow">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-navy/10 text-navy">
+                  <span class="text-xl font-bold">01</span>
+                </div>
+                <h3 class="text-xl font-semibold text-slate-950">Calm leadership in crisis</h3>
+                <p class="mt-3 text-base leading-7 text-slate-700">
+                  From major emergencies to daily operations, Chuck has led complex systems with discipline, accountability, and a steady hand when people needed it most.
+                </p>
+              </div>
+
+              <div class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-200 card-glow">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-forest/10 text-forest">
+                  <span class="text-xl font-bold">02</span>
+                </div>
+                <h3 class="text-xl font-semibold text-slate-950">Technology that serves people</h3>
+                <p class="mt-3 text-base leading-7 text-slate-700">
+                  As a FirstNet board member, Chuck works at the intersection of public safety and technology to improve emergency communications and strengthen coordination.
+                </p>
+              </div>
+
+              <div class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-200 card-glow md:col-span-2">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-navy to-forest text-white">
+                  <span class="text-xl font-bold">03</span>
+                </div>
+                <h3 class="text-xl font-semibold text-slate-950">Focused on a stronger Hilton Head Island</h3>
+                <p class="mt-3 text-base leading-7 text-slate-700">
+                  Chuck brings that same calm, decisive leadership to Hilton Head Island—applying data-driven tools, practical management, and a deep commitment to responsive local government that works for residents, families, and small businesses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- PLATFORM SECTION: Core policy pillars and campaign priorities                 -->
+    <!-- ============================================================================ -->
+    <section data-section="platform" id="platform" class="brand-gradient">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:px-8 lg:px-12">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center rounded-full bg-white/80 px-4 py-1 text-sm font-semibold tracking-wide text-[var(--navy)] ring-1 ring-slate-200">
+            Campaign Platform
+          </span>
+          <h2 class="mt-5 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            A focused platform for a stronger Ward 5
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-slate-700">
+            This campaign is not about slogans. It is about practical solutions that improve daily life on Hilton Head Island—solutions rooted in measurable results, long-term planning, and community accountability.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl bg-white/90 p-7 ring-1 ring-slate-200 card-glow transition-transform duration-300 hover:-translate-y-1">
+            <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-[var(--navy)] ring-1 ring-blue-100">
+              <!-- Shield / fortress icon -->
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="h-8 w-8 fill-none stroke-current stroke-[1.8]">
+                <path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/>
+                <path d="M9.5 12.2l1.9 1.9 3.6-4"/>
+              </svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-slate-950">Public Safety</h3>
+            <p class="mt-3 leading-7 text-slate-700">
+              Prioritize emergency readiness, stronger coordination, and resilient communications so residents and visitors are protected when it matters most.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white/90 p-7 ring-1 ring-slate-200 card-glow transition-transform duration-300 hover:-translate-y-1">
+            <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-50 text-[var(--forest)] ring-1 ring-emerald-100">
+              <!-- Tech pulse icon -->
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="h-8 w-8 fill-none stroke-current stroke-[1.8]">
+                <path d="M4 12h3l2-4 4 8 2-4h5"/>
+                <rect x="3" y="4" width="18" height="16" rx="3"/>
+              </svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-slate-950">Transportation Technology</h3>
+            <p class="mt-3 leading-7 text-slate-700">
+              Use smart, measurable, data-driven tools to improve traffic flow and transportation infrastructure—not just manage “traffic,” but solve movement across the island.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white/90 p-7 ring-1 ring-slate-200 card-glow transition-transform duration-300 hover:-translate-y-1">
+            <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100 text-slate-700 ring-1 ring-slate-200">
+              <!-- Handshake / community icon -->
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="h-8 w-8 fill-none stroke-current stroke-[1.8]">
+                <path d="M7 12l2.5-2.5a2 2 0 012.8 0l.7.7a2 2 0 002.8 0l1.2-1.2"/>
+                <path d="M4 13l4.5 4.5a2 2 0 002.8 0l1.7-1.7a2 2 0 012.8 0l1.2 1.2"/>
+                <path d="M15 8l2-2a3 3 0 014.2 0"/>
+                <path d="M3 9l3-3a3 3 0 014.2 0l1 1"/>
+              </svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-slate-950">Community Commitment</h3>
+            <p class="mt-3 leading-7 text-slate-700">
+              Bring neighbors, businesses, and town leaders together with a collaborative approach that listens first and delivers lasting results.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- WHY CHUCK SECTION: Vision and practical leadership                            -->
+    <!-- ============================================================================ -->
+    <section data-section="why-chuck" class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:px-8 lg:px-12">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div class="space-y-6">
+            <div class="inline-flex items-center rounded-full border border-[var(--forest)]/15 bg-[linear-gradient(135deg,rgba(30,58,138,.08),rgba(22,101,52,.08))] px-4 py-2 text-sm font-semibold text-[var(--forest)]">
+              Trusted leadership for Hilton Head Island
+            </div>
+            <div>
+              <h2 class="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">
+                Leadership that turns experience into action
+              </h2>
+              <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-700">
+                Chuck’s vision for Ward 5 centers on a simple idea: Hilton Head Island deserves leadership that can anticipate problems, coordinate solutions, and use technology wisely. That means better transportation infrastructure, stronger public safety systems, and decisions grounded in data rather than guesswork.
+              </p>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,.06)]">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--navy)]">Smarter planning</p>
+                <p class="mt-2 text-sm leading-6 text-slate-700">Build systems that are proactive, measurable, and ready for the island’s growth.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,.06)]">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--forest)]">Community-first</p>
+                <p class="mt-2 text-sm leading-6 text-slate-700">Keep residents, workers, visitors, and public servants at the center of every decision.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-3xl bg-[linear-gradient(135deg,rgba(30,58,138,.16),rgba(22,101,52,.18))] blur-2xl"></div>
+            <div class="rounded-3xl border border-slate-200 bg-[linear-gradient(180deg,#ffffff,rgba(248,250,252,.92))] p-6 sm:p-8 shadow-[0_18px_50px_rgba(15,23,42,.10)]">
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="text-2xl font-bold text-slate-950">What this looks like on the ground</h3>
+                <span class="rounded-full bg-[var(--navy)]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--navy)]">Ward 5 priorities</span>
+              </div>
+
+              <ul class="mt-6 space-y-4 text-slate-700">
+                <li class="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 h-3 w-3 shrink-0 rounded-full bg-[var(--forest)]"></span>
+                  <div>
+                    <p class="font-semibold text-slate-950">Smart traffic management</p>
+                    <p class="mt-1 text-sm leading-6">Measure congestion, timing, and flow to reduce bottlenecks and make travel smoother.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 h-3 w-3 shrink-0 rounded-full bg-[var(--navy)]"></span>
+                  <div>
+                    <p class="font-semibold text-slate-950">Infrastructure that works for everyone</p>
+                    <p class="mt-1 text-sm leading-6">Support residents, workers, emergency responders, and visitors with reliable planning.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 h-3 w-3 shrink-0 rounded-full bg-[var(--forest)]"></span>
+                  <div>
+                    <p class="font-semibold text-slate-950">Stronger public safety coordination</p>
+                    <p class="mt-1 text-sm leading-6">Improve communication, response, and collaboration across critical systems.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- SUPPORTERS SECTION: Call to action with form                                 -->
+    <!-- ============================================================================ -->
+    <section data-section="supporters" id="supporters" class="brand-gradient">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:px-8 lg:px-12 lg:py-20">
+        <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div class="text-slate-900">
+            <div class="inline-flex items-center rounded-full bg-white/80 px-4 py-2 text-sm font-semibold tracking-wide text-[var(--forest)] ring-1 ring-emerald-200 backdrop-blur">
+              Join the Coalition for Hilton Head Island
+            </div>
+
+            <h2 class="mt-5 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl text-shadow-soft">
+              Working Together for a Stronger Hilton Head Island
+            </h2>
+
+            <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-700">
+              If you believe in experienced leadership, smarter infrastructure, and a safer future for Ward 5, add your name to Chuck’s growing coalition of supporters. Every conversation matters, and every supporter helps build momentum for a stronger island.
+            </p>
+
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div class="card-glow rounded-3xl bg-white/90 p-5 ring-1 ring-slate-200">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--navy)]">Public Safety</p>
+                <p class="mt-2 text-sm leading-6 text-slate-700">Practical, community-first solutions that keep neighborhoods safe and resilient.</p>
+              </div>
+              <div class="card-glow rounded-3xl bg-white/90 p-5 ring-1 ring-slate-200">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--forest)]">Transportation</p>
+                <p class="mt-2 text-sm leading-6 text-slate-700">Smarter traffic flow and modern planning that supports growth without gridlock.</p>
+              </div>
+              <div class="card-glow rounded-3xl bg-white/90 p-5 ring-1 ring-slate-200">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-900">Community</p>
+                <p class="mt-2 text-sm leading-6 text-slate-700">Strong neighborhoods, responsive leadership, and results that put residents first.</p>
+              </div>
+            </div>
+
+            <div class="mt-8 rounded-3xl bg-slate-950/90 p-6 text-white shadow-2xl ring-1 ring-white/10">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-2xl">★</div>
+                <div>
+                  <p class="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">Campaign Priorities</p>
+                  <p class="mt-3 leading-7 text-white/90">
+                    Public safety • Smart transportation solutions • Responsive local leadership • Community-focused results
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glow rounded-[1.75rem] bg-white p-6 shadow-2xl ring-1 ring-slate-200 sm:p-8">
+            <div class="mb-6">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--forest)]">Support Chuck Dowd</p>
+              <h3 class="mt-2 text-2xl font-bold tracking-tight text-slate-950">Make your voice part of the movement</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-600">
+                Share your contact information and let us know how you’d like to help. Whether you can volunteer, host an event, or simply stay informed, your support matters.
+              </p>
+            </div>
+
+            <form class="contact-form space-y-4" novalidate>
+              <div>
+                <label for="name" class="mb-2 block text-sm font-semibold text-slate-800">Full Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--navy)] focus:bg-white focus:ring-4 focus:ring-[var(--navy)]/15" placeholder="Your name" />
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-sm font-semibold text-slate-800">Email Address <span class="text-red-600">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--navy)] focus:bg-white focus:ring-4 focus:ring-[var(--navy)]/15" placeholder="you@example.com" />
+              </div>
+              <div>
+                <label for="phone" class="mb-2 block text-sm font-semibold text-slate-800">Phone Number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--navy)] focus:bg-white focus:ring-4 focus:ring-[var(--navy)]/15" placeholder="(555) 555-5555" />
+              </div>
+              <div>
+                <label for="message" class="mb-2 block text-sm font-semibold text-slate-800">How would you like to help?</label>
+                <textarea id="message" name="message" rows="5" class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--navy)] focus:bg-white focus:ring-4 focus:ring-[var(--navy)]/15" placeholder="Volunteer, host an event, or share your ideas for Ward 5."></textarea>
+              </div>
+              <button type="submit" class="w-full rounded-2xl bg-[var(--forest)] px-5 py-3.5 text-base font-semibold text-white transition hover:bg-emerald-800 focus:outline-none focus:ring-4 focus:ring-[var(--forest)]/25 focus:ring-offset-2">
+                Join the Campaign
+              </button>
+              <p class="text-sm leading-6 text-slate-500">By submitting, you agree to receive campaign updates from Chuck Dowd for Ward 5.</p>
+            </form>
+
+            <div id="form-status" class="mt-5 hidden rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-900"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================================ -->
+  <!-- FOOTER: Contact information and campaign closure                             -->
+  <!-- ============================================================================ -->
+  <footer data-section="footer" class="border-t border-slate-200 bg-slate-950 text-slate-200">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:px-8 lg:px-12">
+      <div class="grid gap-10 md:grid-cols-2 md:items-end">
+        <div class="max-w-2xl">
+          <p class="text-lg font-bold tracking-tight text-white sm:text-xl">Chuck Dowd for Ward 5</p>
+          <p class="mt-3 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
+            A focused, forward-looking campaign for Hilton Head Island—advancing public safety, transportation technology, and strong community commitment for Ward 5.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-sm md:text-right">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">Contact</p>
+          <p class="mt-3 text-sm text-slate-300">
+            Email:
+            <a href="mailto:info@chuckdowdward5.com" class="font-medium text-emerald-300 transition-colors hover:text-emerald-200">info@chuckdowdward5.com</a>
+          </p>
+          <p class="mt-2 text-sm text-slate-300">Campaign Office: Hilton Head Island, SC</p>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-white/10 pt-6 text-sm text-slate-400">
+        © 2026 Chuck Dowd for Ward 5. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== SUPPORTER FORM WEBHOOK SUBMISSION =====
+    // Purpose: Collect supporter information and send it to the campaign webhook
+    // Behavior: Prevent default submit, POST JSON, show success/error states, disable button while sending
+    (function () {
+      const form = document.querySelector('.contact-form');
+      const statusEl = document.getElementById('form-status');
+      const webhookUrl = 'https://paymegpt.com/api/webhooks/flow/4802/264347f95b3266ff3db312331dff5dcfce1065abf904ba1baeead76430bce05b';
+
+      if (!form || !statusEl) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const nameValue = document.getElementById('name').value.trim();
+        const emailValue = document.getElementById('email').value.trim();
+        const phoneValue = document.getElementById('phone').value.trim();
+        const messageValue = document.getElementById('message').value.trim();
+
+        if (!emailValue) {
+          statusEl.className = 'mt-5 rounded-2xl border border-red-200 bg-red-50 p-4 text-red-800';
+          statusEl.textContent = 'Please enter your email address so we can keep in touch.';
+          statusEl.classList.remove('hidden');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        statusEl.className = 'mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-blue-900';
+        statusEl.textContent = 'Sending your information...';
+        statusEl.classList.remove('hidden');
+
+        try {
+          const res = await fetch(webhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contactEmail: emailValue,
+              contactName: nameValue,
+              contactPhone: phoneValue || undefined,
+              data: {
+                message: messageValue,
+                source: 'Ward 5 Campaign Landing Page'
+              }
+            })
+          });
+
+          if (!res.ok) throw new Error('Network response was not ok');
+
+          statusEl.className = 'mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-900';
+          statusEl.innerHTML = '<strong>Thank you!</strong> We\'ll be in touch shortly. Your support for Chuck Dowd matters.';
+          form.classList.add('hidden');
+        } catch (err) {
+          statusEl.className = 'mt-5 rounded-2xl border border-red-200 bg-red-50 p-4 text-red-800';
+          statusEl.textContent = 'Sorry, something went wrong while submitting the form. Please try again in a moment.';
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
