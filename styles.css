@@ -1,25 +1,8 @@
 /* ===== GLOBAL POLISH ===== */
-    /* Smooth anchor scrolling + offset so the sticky navbar never covers headings */
     html { scroll-behavior: smooth; }
     section[id] { scroll-margin-top: 88px; }
-
-    /* Branded text selection color */
     ::selection { background: rgba(30, 58, 138, .15); }
-
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-    /* Elements with .reveal fade/slide in once when they enter the viewport */
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-    .reveal.is-visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* Respect users who prefer reduced motion */
+    .reveal { will-change: transform, opacity; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
     }
