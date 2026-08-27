@@ -258,6 +258,69 @@
   });
 })();
 </script>
+<script data-donation>
+(function(){
+  var slug='64suVhYKY4';
+  var apiBase='https://paymegpt.com';
+  var currency='USD';
+  var minAmt=500;var maxAmt=500000;
+  var thankYouMsg='Thank you for supporting Chuck Dowd for Ward 5! Your contribution makes a real difference.';var successSubtext='Your donation has been processed successfully.';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function getLang(){var l=(document.documentElement.lang||navigator.language||'en').toLowerCase();return l.split('-')[0];}
+  function getLocale(){return (document.documentElement.lang||navigator.language||'en');}
+  var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
+  function t(k){var L=getLang();return (I18N[L]&&I18N[L][k])||I18N.en[k];}
+  function fmtD(c){try{return new Intl.NumberFormat(getLocale(),{style:'currency',currency:currency}).format(c/100);}catch(e){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}}
+  window.__donationConfig={currency:currency,presets:[25,50,100,250,500],minAmount:500/100,maxAmount:500000/100,formatAmount:fmtD,buttonColor:'#1e3a8a',buttonText:'Donate Now',thankYouMessage:'Thank you for supporting Chuck Dowd for Ward 5! Your contribution makes a real difference.'};
+  function findDonEmail2(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
+  function findDonName2(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
+  function findDonPhone2(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  window.__processDonation=function(a,b,c,d){
+    var amountCents,email='',name='',donorMessage='',productName='',productDescription='',quantity=1;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents||(a.amount?Math.round(Number(a.amount)*100):0);
+      email=a.email||'';
+      productName=a.productName||a.label||'';
+      productDescription=a.productDescription||a.description||'';
+      name=a.name||a.donorName||'';
+      donorMessage=a.message||a.donorMessage||'';
+      quantity=a.quantity&&parseInt(a.quantity,10)>0?parseInt(a.quantity,10):1;
+    }else{
+      amountCents=typeof a==='number'?a:(parseInt(a,10)||0);
+      var rest=[b,c,d];var nonEmail=[];
+      for(var i=0;i<rest.length;i++){var v=rest[i];if(typeof v==='string'&&v){if(!email&&v.indexOf('@')>-1&&/^[^s@]+@[^s@]+.[^s@]+$/.test(v.trim())){email=v.trim();}else{nonEmail.push(v);}}}
+      name=nonEmail[0]||'';donorMessage=nonEmail[1]||'';
+    }
+    if(!email)email=findDonEmail2();
+    if(!name)name=findDonName2();
+    var donorPhone=findDonPhone2();
+    if(!amountCents||amountCents<minAmt){alert(t('min')+fmtD(minAmt));return Promise.reject('below_min');}
+    if(amountCents>maxAmt){alert(t('max')+fmtD(maxAmt));return Promise.reject('above_max');}
+    if(!email){var p=window.prompt(t('emailPrompt'),'');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert(t('emailRequired'));return;}}
+    var successBase=window.location.href.split('?')[0];
+    fetch(apiBase+'/api/landing-pages/public/'+slug+'/donation/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:name||'',phone:donorPhone||'',amountCents:amountCents,message:donorMessage||'',productName:productName||'',productDescription:productDescription||'',quantity:quantity,locale:getLocale(),successUrl:successBase+'?donation=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?donation=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||t('failed'));}
+    }).catch(function(){alert(t('failed'));});
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('donation')==='success'){
+      var sidD=urlParams.get('session_id');
+      if(sidD){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidD})}).catch(function(){});}catch(e){}}
+      var overlay=document.createElement('div');overlay.id='donation-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">'+esc(thankYouMsg)+'</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(successSubtext)+'</p><button id="lp-don-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var dBtn=document.getElementById('lp-don-success-btn');
+      if(dBtn){dBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
 <script data-cart>
 (function(){
   var slug='64suVhYKY4';
@@ -339,13 +402,8 @@
 
 <body class="bg-white font-sans text-slate-900 antialiased">
 
-  <!-- ============================================================================ -->
-  <!-- NAVBAR: Sticky header with brand, anchor links, CTA, and mobile menu         -->
-  <!-- ============================================================================ -->
   <nav data-section="navbar" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-
-      <!-- Brand: candidate photo + name -->
       <a href="#hero" class="inline-flex items-center gap-3">
         <img src="https://paymegpt.com/objects/quick-uploads/2/0c21a2ae927ba919.png" alt="Chuck Dowd" class="h-10 w-10 rounded-full object-cover ring-2 ring-navy/10" />
         <span class="leading-tight">
@@ -353,34 +411,28 @@
           <span class="block text-xs font-semibold text-slate-500">for Ward 5</span>
         </span>
       </a>
-
-      <!-- Desktop links -->
       <div class="hidden items-center gap-8 md:flex">
         <a href="#about" class="text-sm font-semibold text-slate-600 transition hover:text-navy">About</a>
         <a href="#platform" class="text-sm font-semibold text-slate-600 transition hover:text-navy">Platform</a>
         <a href="#priorities" class="text-sm font-semibold text-slate-600 transition hover:text-navy">Priorities</a>
+        <a href="#donate" class="inline-flex items-center rounded-full bg-forest px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-forest-dark focus:outline-none focus-visible:ring-4 focus-visible:ring-forest/30">Donate</a>
         <a href="#supporters" class="inline-flex items-center rounded-full bg-forest px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-forest-dark focus:outline-none focus-visible:ring-4 focus-visible:ring-forest/30">Join the Campaign</a>
       </div>
-
-      <!-- Mobile menu toggle button -->
       <button id="menu-toggle" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-slate-700 ring-1 ring-slate-200 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
-        <!-- Hamburger icon -->
         <svg id="icon-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <path d="M4 7h16M4 12h16M4 17h16" />
         </svg>
-        <!-- Close icon (hidden by default) -->
         <svg id="icon-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <path d="M6 6l12 12M18 6L6 18" />
         </svg>
       </button>
     </div>
-
-    <!-- Mobile menu panel (toggled via JS) -->
     <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white md:hidden">
       <div class="space-y-1 px-4 py-4 sm:px-6">
         <a href="#about" class="mobile-nav-link block rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-navy">About</a>
         <a href="#platform" class="mobile-nav-link block rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-navy">Platform</a>
         <a href="#priorities" class="mobile-nav-link block rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-navy">Priorities</a>
+        <a href="#donate" class="mobile-nav-link mt-2 block rounded-xl bg-forest px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-forest-dark">Donate</a>
         <a href="#supporters" class="mobile-nav-link mt-2 block rounded-xl bg-forest px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-forest-dark">Join the Campaign</a>
       </div>
     </div>
@@ -388,36 +440,26 @@
 
   <main>
 
-    <!-- ============================================================================ -->
-    <!-- HERO SECTION: Candidate portrait (top, unobstructed) + core message + stats  -->
-    <!-- ============================================================================ -->
     <section data-section="hero" id="hero" class="bg-white">
-
-      <!-- Candidate portrait: full width, no overlays, fully visible -->
       <div class="w-full border-b border-slate-100">
         <img
           src="https://paymegpt.com/objects/quick-uploads/2/ee7d452e768fdcf4.png"
           alt="Professional headshot of Chuck Dowd, candidate for Ward 5 on Hilton Head Island"
           fetchpriority="high"
           decoding="async"
-          class="h-auto w-full bg-white object-contain object-center"
+          class="h-auto w-full bg-white object-contain object-center block"
         />
       </div>
-
-      <!-- Core campaign message: centered for a clean, focused first impression -->
       <div class="mx-auto max-w-6xl px-4 pb-14 pt-12 text-center sm:px-6 sm:pt-16 lg:px-8 lg:pb-16">
         <span class="inline-flex items-center rounded-full bg-navy/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-navy ring-1 ring-navy/10 sm:text-xs sm:tracking-[0.18em]">
           Hilton Head Island Town Council · Ward 5
         </span>
-
         <h1 class="mx-auto mt-6 max-w-3xl text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
           Keep Ward 5 Safe.<br />Moving. Livable.
         </h1>
-
         <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
           Retired NYPD Assistant Chief. 35 years of public service. Now running to bring steady, experienced leadership to Hilton Head Island, focused on public safety, smarter transportation, and a community that always comes first.
         </p>
-
         <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a href="#supporters" class="inline-flex w-full items-center justify-center rounded-full bg-navy px-7 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-navy-dark focus:outline-none focus-visible:ring-4 focus-visible:ring-navy/30 sm:w-auto">
             Join the Campaign
@@ -427,8 +469,6 @@
           </a>
         </div>
       </div>
-
-      <!-- Credentials strip: clean divided row instead of cluttered cards -->
       <div class="border-t border-slate-200 bg-slate-50/60">
         <div class="mx-auto grid max-w-6xl grid-cols-1 divide-y divide-slate-200 px-4 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-6 lg:px-8">
           <div class="px-2 py-7 text-center sm:px-8">
@@ -447,14 +487,9 @@
       </div>
     </section>
 
-    <!-- ============================================================================ -->
-    <!-- ABOUT SECTION: Candidate background in a clean editorial layout              -->
-    <!-- ============================================================================ -->
     <section data-section="about" id="about" class="bg-white">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
-
-          <!-- Left: section intro -->
           <div class="reveal lg:col-span-5">
             <span class="inline-flex items-center rounded-full bg-navy/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-navy ring-1 ring-navy/10">About Chuck</span>
             <h2 class="mt-5 text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -467,8 +502,6 @@
               Today, as a board member of FirstNet, he works at the intersection of public safety and technology. Now he's ready to bring that same calm, data-driven leadership home to Hilton Head Island.
             </p>
           </div>
-
-          <!-- Right: numbered credentials list (minimal, no heavy cards) -->
           <div class="reveal lg:col-span-7">
             <ol class="divide-y divide-slate-200 border-y border-slate-200">
               <li class="flex gap-6 py-7">
@@ -500,18 +533,12 @@
               </li>
             </ol>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ============================================================================ -->
-    <!-- PLATFORM SECTION: Three core campaign pillars in consistent, clean cards     -->
-    <!-- ============================================================================ -->
     <section data-section="platform" id="platform" class="bg-slate-50">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-
-        <!-- Section header -->
         <div class="reveal max-w-2xl">
           <span class="inline-flex items-center rounded-full bg-navy/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-navy ring-1 ring-navy/10">The Platform</span>
           <h2 class="mt-5 text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -521,11 +548,7 @@
             No slogans. Just measurable, common-sense solutions rooted in long-term planning and community accountability.
           </p>
         </div>
-
-        <!-- Pillar cards -->
         <div class="mt-12 grid gap-6 md:grid-cols-3">
-
-          <!-- Pillar 1: Public Safety -->
           <article class="reveal rounded-2xl bg-white p-8 ring-1 ring-slate-200 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-slate-300">
             <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-navy/5 text-navy ring-1 ring-navy/10">
               <svg aria-hidden="true" viewBox="0 0 24 24" class="h-7 w-7 fill-none stroke-current stroke-[1.8]" stroke-linecap="round" stroke-linejoin="round">
@@ -538,8 +561,6 @@
               Strengthen emergency readiness, coordination, and resilient communications so residents and visitors are protected when it matters most.
             </p>
           </article>
-
-          <!-- Pillar 2: Transportation Technology -->
           <article class="reveal rounded-2xl bg-white p-8 ring-1 ring-slate-200 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-slate-300">
             <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-forest/5 text-forest ring-1 ring-forest/10">
               <svg aria-hidden="true" viewBox="0 0 24 24" class="h-7 w-7 fill-none stroke-current stroke-[1.8]" stroke-linecap="round" stroke-linejoin="round">
@@ -552,9 +573,6 @@
               Use smart, measurable tools to improve traffic flow and island mobility, solving movement instead of just managing congestion.
             </p>
           </article>
-
-          <!-- Pillar 3: Community Commitment -->
-          <!-- Icon: standard "community" mark (group of people), stroke style matched to the other pillars -->
           <article class="reveal rounded-2xl bg-white p-8 ring-1 ring-slate-200 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-slate-300">
             <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-navy/5 text-navy ring-1 ring-navy/10">
               <svg aria-hidden="true" viewBox="0 0 24 24" class="h-7 w-7 fill-none stroke-current stroke-[1.8]" stroke-linecap="round" stroke-linejoin="round">
@@ -573,14 +591,9 @@
       </div>
     </section>
 
-    <!-- ============================================================================ -->
-    <!-- PRIORITIES SECTION: Dark contrast band - what Chuck's leadership looks like  -->
-    <!-- ============================================================================ -->
     <section data-section="priorities" id="priorities" class="bg-gradient-to-br from-[#16295f] via-navy-dark to-[#0f1c40]">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div class="grid gap-12 lg:grid-cols-2 lg:gap-16">
-
-          <!-- Left: intro copy -->
           <div class="reveal">
             <span class="inline-flex items-center rounded-full bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-emerald-300 ring-1 ring-white/10">On the Ground</span>
             <h2 class="mt-5 text-balance text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -594,8 +607,6 @@
               <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </div>
-
-          <!-- Right: priority checklist -->
           <div class="reveal">
             <ul class="divide-y divide-white/10 border-y border-white/10">
               <li class="flex gap-4 py-6">
@@ -627,19 +638,89 @@
               </li>
             </ul>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ============================================================================ -->
-    <!-- SUPPORTERS SECTION: Get-involved copy + supporter signup form (webhook)      -->
-    <!-- ============================================================================ -->
+    <section data-section="donate" id="donate" class="bg-gradient-to-br from-forest/5 via-white to-navy/5">
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+        <div class="reveal mb-12 text-center">
+          <span class="inline-flex items-center rounded-full bg-forest/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-forest ring-1 ring-forest/20">Donate</span>
+          <h2 class="mx-auto mt-6 max-w-3xl text-balance text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+            Fuel the campaign to keep Ward 5 moving
+          </h2>
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Your support helps us reach neighbors, share Chuck's message, and build the grassroots campaign Ward 5 deserves. Every contribution makes a difference.
+          </p>
+        </div>
+
+        <div class="reveal mx-auto max-w-2xl rounded-3xl bg-white p-8 shadow-xl ring-1 ring-slate-200 sm:p-12">
+          <div class="mb-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-forest">Quick select</p>
+            <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
+              <button type="button" class="donation-amount group relative rounded-2xl bg-gradient-to-br from-forest to-forest-dark px-4 py-4 text-center text-sm font-bold text-white shadow-md transition duration-300 hover:shadow-lg hover:scale-105 sm:px-3 sm:py-5" data-amount="25">
+                <span class="block text-lg sm:text-xl">$25</span>
+                <span class="block text-xs opacity-90 mt-1">Entry</span>
+              </button>
+              <button type="button" class="donation-amount group relative rounded-2xl bg-gradient-to-br from-forest to-forest-dark px-4 py-4 text-center text-sm font-bold text-white shadow-md transition duration-300 hover:shadow-lg hover:scale-105 sm:px-3 sm:py-5" data-amount="50">
+                <span class="block text-lg sm:text-xl">$50</span>
+                <span class="block text-xs opacity-90 mt-1">Supporter</span>
+              </button>
+              <button type="button" class="donation-amount group relative rounded-2xl bg-gradient-to-br from-forest to-forest-dark px-4 py-4 text-center text-sm font-bold text-white shadow-md transition duration-300 hover:shadow-lg hover:scale-105 sm:px-3 sm:py-5" data-amount="100">
+                <span class="block text-lg sm:text-xl">$100</span>
+                <span class="block text-xs opacity-90 mt-1">Champion</span>
+              </button>
+              <button type="button" class="donation-amount group relative rounded-2xl bg-gradient-to-br from-forest to-forest-dark px-4 py-4 text-center text-sm font-bold text-white shadow-md transition duration-300 hover:shadow-lg hover:scale-105 sm:px-3 sm:py-5" data-amount="250">
+                <span class="block text-lg sm:text-xl">$250</span>
+                <span class="block text-xs opacity-90 mt-1">Leader</span>
+              </button>
+              <button type="button" class="donation-amount group relative rounded-2xl bg-gradient-to-br from-forest to-forest-dark px-4 py-4 text-center text-sm font-bold text-white shadow-md transition duration-300 hover:shadow-lg hover:scale-105 sm:px-3 sm:py-5" data-amount="500">
+                <span class="block text-lg sm:text-xl">$500</span>
+                <span class="block text-xs opacity-90 mt-1">Visionary</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="mb-8 border-t border-slate-200 pt-8">
+            <label for="custom-donation-amount" class="mb-3 block text-sm font-bold text-slate-900">Or enter a custom amount</label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-2xl font-bold text-forest">$</span>
+              <input id="custom-donation-amount" name="amount" type="number" min="1" step="1" inputmode="numeric" placeholder="Enter any amount" class="w-full rounded-2xl border-0 bg-slate-50 py-4 pl-10 pr-4 text-lg font-semibold text-slate-900 ring-2 ring-slate-200 transition placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest" />
+            </div>
+          </div>
+
+          <form id="donation-form" class="space-y-4" novalidate>
+            <div>
+              <label for="donation-email" class="mb-2 block text-sm font-bold text-slate-900">Email Address <span class="text-red-600">*</span></label>
+              <input id="donation-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="w-full rounded-2xl border-0 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 ring-2 ring-slate-200 transition placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest" />
+            </div>
+            <button type="button" id="donate-now-btn" class="w-full rounded-2xl bg-gradient-to-r from-forest to-forest-dark px-6 py-4 text-base font-bold text-white shadow-lg transition duration-300 hover:shadow-xl hover:scale-102 focus:outline-none focus-visible:ring-4 focus-visible:ring-forest/30">
+              Donate Now
+            </button>
+            <p class="text-center text-xs leading-5 text-slate-500">By donating, you support the campaign for Chuck Dowd for Ward 5. All contributions are secure.</p>
+          </form>
+        </div>
+
+        <div class="reveal mt-12 grid gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl bg-white p-6 text-center ring-1 ring-slate-200">
+            <p class="text-3xl font-extrabold text-forest">100%</p>
+            <p class="mt-2 text-sm text-slate-600">Funds go directly to campaign outreach</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 text-center ring-1 ring-slate-200">
+            <p class="text-3xl font-extrabold text-forest">Secure</p>
+            <p class="mt-2 text-sm text-slate-600">Your donation is encrypted and protected</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 text-center ring-1 ring-slate-200">
+            <p class="text-3xl font-extrabold text-forest">Thank you</p>
+            <p class="mt-2 text-sm text-slate-600">We'll send a confirmation email shortly</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section data-section="supporters" id="supporters" class="bg-slate-50">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div class="grid gap-12 lg:grid-cols-2 lg:gap-16">
-
-          <!-- Left: invitation copy -->
           <div class="reveal">
             <span class="inline-flex items-center rounded-full bg-forest/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-forest ring-1 ring-forest/10">Get Involved</span>
             <h2 class="mt-5 text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -648,8 +729,6 @@
             <p class="mt-5 max-w-xl text-base leading-8 text-slate-600">
               This campaign runs on neighbors like you. Whether you can knock doors, host a gathering, or simply stay informed, every supporter builds momentum for a stronger island.
             </p>
-
-            <!-- Ways to help: lightweight pills instead of heavy cards -->
             <div class="mt-7 flex flex-wrap gap-3">
               <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200">
                 <span class="h-2 w-2 rounded-full bg-forest"></span> Volunteer
@@ -661,14 +740,11 @@
                 <span class="h-2 w-2 rounded-full bg-forest"></span> Spread the word
               </span>
             </div>
-
             <p class="mt-8 text-sm text-slate-500">
               Questions? Email us at
               <a href="mailto:chuckforhhi5@gmail.com" class="font-semibold text-forest transition hover:text-forest-dark">chuckforhhi5@gmail.com</a>
             </p>
           </div>
-
-          <!-- Right: supporter signup form -->
           <div class="reveal">
             <div class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-200 sm:p-8">
               <div class="mb-6">
@@ -678,8 +754,6 @@
                   Share your details and tell us how you'd like to help. We'll be in touch.
                 </p>
               </div>
-
-              <!-- Supporter form: submits via JS fetch() to the campaign webhook -->
               <form id="supporter-form" class="contact-form space-y-4" novalidate>
                 <div>
                   <label for="name" class="mb-1.5 block text-sm font-semibold text-slate-700">Full Name</label>
@@ -718,26 +792,18 @@
                 </button>
                 <p class="text-xs leading-5 text-slate-400">By submitting, you agree to receive campaign updates from Chuck Dowd for Ward 5.</p>
               </form>
-
-              <!-- Status message area (success / error / loading feedback) -->
               <div id="form-status" role="status" aria-live="polite" class="mt-5 hidden rounded-xl p-4 text-sm"></div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============================================================================ -->
-  <!-- FOOTER: Brand, quick links, contact, and campaign disclaimer                 -->
-  <!-- ============================================================================ -->
   <footer data-section="footer" class="bg-slate-950 text-slate-300">
     <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
       <div class="grid gap-10 md:grid-cols-3">
-
-        <!-- Brand -->
         <div>
           <p class="text-lg font-extrabold tracking-tight text-white">Chuck Dowd <span class="text-emerald-400">for Ward 5</span></p>
           <p class="mt-3 max-w-xs text-sm leading-7 text-slate-400">
@@ -751,8 +817,6 @@
             </a>
           </div>
         </div>
-
-        <!-- Quick links -->
         <div>
           <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Explore</p>
           <ul class="mt-4 space-y-2.5 text-sm">
@@ -762,8 +826,6 @@
             <li><a href="#supporters" class="transition hover:text-white">Get Involved</a></li>
           </ul>
         </div>
-
-        <!-- Contact -->
         <div>
           <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Contact</p>
           <ul class="mt-4 space-y-2.5 text-sm">
@@ -777,8 +839,6 @@
           </ul>
         </div>
       </div>
-
-      <!-- Bottom bar: copyright + standard campaign disclaimer -->
       <div class="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Chuck Dowd for Ward 5. All rights reserved.</p>
         <p>Paid for by Chuck for HHI 5.</p>
@@ -786,12 +846,12 @@
     </div>
   </footer>
 
+  <!-- GSAP + ScrollTrigger, INLINED (not loaded via external <script src>) so the animation
+       engine never depends on a third-party CDN request succeeding at render time. -->
+  
+  
+  
   <script>
-    // ============================================================================
-    // ===== MOBILE MENU TOGGLE =====
-    // Purpose: Show/hide the navigation menu on small screens
-    // Triggers: Click on the hamburger button; auto-closes when a link is tapped
-    // ============================================================================
     (function () {
       var toggleBtn = document.getElementById('menu-toggle');
       var mobileMenu = document.getElementById('mobile-menu');
@@ -800,7 +860,6 @@
 
       if (!toggleBtn || !mobileMenu) return;
 
-      // Helper: set menu open/closed state (icons + aria attribute)
       function setMenuState(isOpen) {
         mobileMenu.classList.toggle('hidden', !isOpen);
         iconOpen.classList.toggle('hidden', isOpen);
@@ -812,49 +871,184 @@
         setMenuState(mobileMenu.classList.contains('hidden'));
       });
 
-      // Close the menu whenever a mobile link is tapped
       mobileMenu.querySelectorAll('.mobile-nav-link').forEach(function (link) {
         link.addEventListener('click', function () { setMenuState(false); });
       });
     })();
 
-    // ============================================================================
-    // ===== SCROLL REVEAL ANIMATIONS =====
-    // Purpose: Fade/slide sections into view as the user scrolls
-    // Notes: Progressive enhancement only; content is fully readable without JS
-    // ============================================================================
     (function () {
-      var revealEls = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window) || revealEls.length === 0) {
-        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-        return;
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var smallScreen = window.matchMedia('(max-width: 767px)').matches;
+      var isTouch = window.matchMedia('(pointer: coarse)').matches;
+      if (reduceMotion || typeof gsap === 'undefined') return;
+
+      var enterDur = smallScreen ? 0.72 : 0.96;
+      var enterEase = 'power3.out';
+      var staggerAmt = smallScreen ? 0.08 : 0.12;
+
+      function animateGroup(selector, trigger, xFrom) {
+        var els = gsap.utils.toArray(selector);
+        if (!els.length) return;
+        gsap.set(els, { autoAlpha: 0, y: 36, scale: 0.96, x: xFrom || 0 });
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: trigger || els[0],
+            start: 'top 82%',
+            once: true
+          }
+        }).to(els, {
+          autoAlpha: 1,
+          y: 0,
+          x: 0,
+          scale: 1,
+          duration: enterDur,
+          ease: enterEase,
+          stagger: { each: staggerAmt, from: 'start' }
+        });
       }
 
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+      animateGroup('#hero .grid .grid-cols-1 > div', '#hero', 0);
+      animateGroup('#about ol > li', '#about', 18);
+      animateGroup('#platform article', '#platform', 0);
+      animateGroup('#priorities li', '#priorities', 18);
+
+      var heroImg = document.querySelector('#hero img');
+      if (heroImg) {
+        gsap.fromTo(heroImg, { scale: 1, y: 0 }, {
+          scale: smallScreen ? 1 : 1.02,
+          y: smallScreen ? 0 : 8,
+          ease: 'none',
+          scrollTrigger: smallScreen ? {
+            trigger: '#hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.25
+          } : {
+            trigger: '#hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.8
           }
         });
-      }, { threshold: 0.12 });
+      }
 
-      revealEls.forEach(function (el) { observer.observe(el); });
+      var nav = document.querySelector('nav');
+      var navBrandImg = nav ? nav.querySelector('img') : null;
+      var navBar = nav ? nav.querySelector('div.mx-auto') : null;
+      if (nav && navBrandImg && navBar) {
+        ScrollTrigger.create({
+          trigger: '#hero',
+          start: 'bottom top',
+          onEnter: function () {
+            gsap.to(nav, { boxShadow: '0 10px 30px rgba(15, 23, 42, 0.08)', duration: 0.35, ease: 'power3.out', overwrite: 'auto' });
+            gsap.to(navBar, { paddingTop: smallScreen ? 10 : 8, paddingBottom: smallScreen ? 10 : 8, duration: 0.35, ease: 'power3.out', overwrite: 'auto' });
+            gsap.to(navBrandImg, { width: 36, height: 36, duration: 0.35, ease: 'power3.out', overwrite: 'auto' });
+          },
+          onLeaveBack: function () {
+            gsap.to(nav, { boxShadow: '0 0 0 rgba(0,0,0,0)', duration: 0.35, ease: 'power3.out', overwrite: 'auto' });
+            gsap.to(navBar, { paddingTop: 12, paddingBottom: 12, duration: 0.35, ease: 'power3.out', overwrite: 'auto' });
+            gsap.to(navBrandImg, { width: 40, height: 40, duration: 0.35, ease: 'power3.out', overwrite: 'auto' });
+          }
+        });
+      }
+
+      var countEl = document.querySelector('#hero .text-navy');
+      if (countEl && countEl.textContent.indexOf('35 Years') !== -1) {
+        var obj = { value: 0 };
+        countEl.textContent = '0 Years';
+        ScrollTrigger.create({
+          trigger: countEl,
+          start: 'top 85%',
+          once: true,
+          onEnter: function () {
+            gsap.to(obj, {
+              value: 35,
+              duration: smallScreen ? 1.05 : 1.35,
+              ease: 'expo.out',
+              onUpdate: function () {
+                countEl.textContent = Math.round(obj.value) + ' Years';
+              }
+            });
+          }
+        });
+      }
+
+      if (!isTouch) {
+        var hoverItems = document.querySelectorAll('#platform article, a[href="#supporters"], a[href="#donate"], .donation-amount, #donate-now-btn, #supporter-form button[type="submit"]');
+        hoverItems.forEach(function (el) {
+          el.addEventListener('mouseenter', function () {
+            gsap.to(el, { scale: 1.02, y: -2, rotationX: 1.5, rotationY: -1.5, duration: 0.28, ease: 'power3.out', overwrite: 'auto', transformPerspective: 800 });
+          });
+          el.addEventListener('mouseleave', function () {
+            gsap.to(el, { scale: 1, y: 0, rotationX: 0, rotationY: 0, duration: 0.3, ease: 'power3.out', overwrite: 'auto' });
+          });
+        });
+      }
     })();
 
-    // ============================================================================
-    // ===== SUPPORTER FORM WEBHOOK SUBMISSION =====
-    // Purpose: Collect supporter info and POST it to the campaign webhook
-    // Behavior: Prevent default submit, send JSON, show loading/success/error
-    //           states, and disable the button while sending
-    // ============================================================================
+    (function () {
+      var donateBtn = document.getElementById('donate-now-btn');
+      var amountButtons = document.querySelectorAll('.donation-amount');
+      var customAmount = document.getElementById('custom-donation-amount');
+      var donationEmail = document.getElementById('donation-email');
+      if (!donateBtn || !customAmount || !donationEmail) return;
+
+      var selectedAmount = 25;
+
+      function setSelectedAmount(amount) {
+        selectedAmount = amount;
+        customAmount.value = '';
+        amountButtons.forEach(function (btn) {
+          var isActive = Number(btn.getAttribute('data-amount')) === amount;
+          btn.classList.toggle('bg-forest', isActive);
+          btn.classList.toggle('text-white', isActive);
+          btn.classList.toggle('ring-forest', isActive);
+          btn.classList.toggle('bg-white', !isActive);
+          btn.classList.toggle('text-slate-700', !isActive);
+        });
+      }
+
+      amountButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setSelectedAmount(Number(btn.getAttribute('data-amount')) || 0);
+        });
+      });
+
+      customAmount.addEventListener('input', function () {
+        var val = Number(customAmount.value || 0);
+        if (val > 0) selectedAmount = val;
+        amountButtons.forEach(function (btn) {
+          btn.classList.remove('bg-forest', 'text-white', 'ring-forest');
+          btn.classList.add('bg-white', 'text-slate-700');
+        });
+      });
+
+      if (typeof window.__processDonation !== 'function') {
+        window.__processDonation = function (amount) {
+          alert('Donation processing is not configured. Selected amount: $' + amount);
+        };
+      }
+
+      donateBtn.addEventListener('click', function () {
+        var email = donationEmail.value.trim();
+        var amount = Number(customAmount.value || selectedAmount || 0);
+        if (!email) {
+          donationEmail.focus();
+          donationEmail.reportValidity && donationEmail.reportValidity();
+          return;
+        }
+        if (!amount || amount <= 0) return;
+        window.__processDonation(amount);
+      });
+
+      setSelectedAmount(25);
+    })();
+
     (function () {
       var form = document.getElementById('supporter-form');
       var statusEl = document.getElementById('form-status');
       if (!form || !statusEl) return;
 
-      // Use the platform-injected webhook when available; otherwise use the
-      // campaign's dedicated webhook endpoint.
       var webhookUrl = window.__formWebhookUrl || 'https://paymegpt.com/api/webhooks/flow/4802/264347f95b3266ff3db312331dff5dcfce1065abf904ba1baeead76430bce05b';
 
       form.addEventListener('submit', async function (e) {
@@ -868,7 +1062,6 @@
         var interestLevelValue = document.getElementById('interest-level').value.trim();
         var messageValue = document.getElementById('message').value.trim();
 
-        // Email is required — show a friendly inline error if missing
         if (!emailValue) {
           statusEl.className = 'mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800';
           statusEl.textContent = 'Please enter your email address so we can keep in touch.';
@@ -876,7 +1069,6 @@
           return;
         }
 
-        // Loading state: disable button + update text
         submitBtn.disabled = true;
         var originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
@@ -903,12 +1095,10 @@
 
           if (!res.ok) throw new Error('Network response was not ok');
 
-          // Success: hide the form and show a thank-you message (no redirect)
           statusEl.className = 'mt-5 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900';
           statusEl.innerHTML = '<strong>Thank you!</strong> We\'ll be in touch shortly. Your support for Chuck Dowd matters.';
           form.classList.add('hidden');
         } catch (err) {
-          // Error: show a friendly message and re-enable the button
           statusEl.className = 'mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800';
           statusEl.textContent = 'Sorry, something went wrong while submitting the form. Please try again in a moment.';
           submitBtn.disabled = false;
