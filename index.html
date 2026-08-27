@@ -461,8 +461,8 @@
         </div>
 
         <!-- Text + portrait row: image sits to the right of the headline on every breakpoint -->
-        <div class="flex flex-row items-center gap-3 sm:gap-5 lg:gap-8">
-          <!-- Left: headline + supporting copy -->
+        <div class="flex flex-row items-center gap-2 sm:gap-5 lg:gap-8">
+          <!-- Left: headline -->
           <div class="flex-1 min-w-0">
             <!-- Main headline (SplitText animated on load) -->
             <h1 id="hero-headline" class="font-display font-semibold text-[clamp(1.9rem,7.5vw,6.5rem)] leading-[1.02] tracking-tight">
@@ -473,20 +473,19 @@
           </div>
 
           <!-- Right: Chuck Dowd portrait (transparent PNG), sized down on mobile, larger on desktop -->
-          <div class="hero-portrait shrink-0 w-32 xs:w-36 sm:w-56 md:w-72 lg:w-[26rem] xl:w-[29rem]">
+          <div class="hero-portrait shrink-0 w-44 xs:w-48 sm:w-64 md:w-72 lg:w-[26rem] xl:w-[29rem]">
             <img src="https://paymegpt.com/objects/quick-uploads/2/e38cac12945d1e34.png" alt="Chuck Dowd" class="w-full h-auto object-contain">
           </div>
         </div>
 
-        <!-- Supporting copy -->
-        <p class="hero-sub mt-7 max-w-2xl text-base sm:text-lg text-white/75 leading-relaxed">
+        <!-- Supporting copy: centered below the headline + portrait row -->
+        <p class="hero-sub mt-7 max-w-2xl mx-auto text-center text-base sm:text-lg text-white/75 leading-relaxed">
           Retired NYPD Assistant Chief. 35 years of public service. Now running to bring steady, experienced leadership to Hilton Head Island &mdash; focused on public safety, smarter transportation, and a community that always comes first.
         </p>
 
-        <!-- Primary CTAs -->
-        <div class="hero-cta mt-9 flex flex-wrap items-center gap-4">
-          <a href="#get-involved" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-8 py-4 rounded-full text-base transition-all hover:shadow-[0_16px_40px_-12px_rgba(201,162,39,.55)]">Join the Campaign</a>
-          <a href="#platform" class="border border-white/30 hover:border-gold-400 hover:text-gold-300 text-white font-semibold px-8 py-4 rounded-full text-base transition-colors">See the Platform</a>
+        <!-- Primary CTA: centered below the headline + portrait row -->
+        <div class="hero-cta mt-7 w-full flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <a href="#get-involved" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-5 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base transition-all hover:shadow-[0_16px_40px_-12px_rgba(201,162,39,.55)] text-center">Join the Campaign</a>
         </div>
 
         <!-- Credential stats row -->
@@ -504,6 +503,7 @@
           <!-- Stat 3 -->
           <div class="hero-stat">
             <p class="font-display text-4xl sm:text-5xl font-semibold text-white">FirstNet <span class="text-gold-400">Board</span></p>
+
             <p class="mt-2 text-sm text-white/60 leading-relaxed">Helping build America's public-safety communications network</p>
           </div>
         </div>
