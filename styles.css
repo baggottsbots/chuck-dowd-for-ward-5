@@ -4,8 +4,8 @@
        ========================================================================== */
 
     /* ===== Smooth anchor scrolling + base body behavior ===== */
-    html { scroll-behavior: smooth; overflow-x: hidden; }
-    body { overscroll-behavior: none; } /* required for the pinned horizontal strip */
+    html { scroll-behavior: smooth; }
+    body { overscroll-behavior: none; overflow-x: hidden; } /* required for the pinned horizontal strip */
 
     /* ===== Anchor offset so fixed navbar never covers section headings ===== */
     section[id] { scroll-margin-top: 96px; }
