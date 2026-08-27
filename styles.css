@@ -1,8 +1,83 @@
-/* ===== GLOBAL POLISH ===== */
+/* ==========================================================================
+       GLOBAL STYLES
+       Mobile-first. Breakpoints: sm(640px) md(768px) lg(1024px) xl(1280px)
+       ========================================================================== */
+
+    /* ===== Smooth anchor scrolling + base body behavior ===== */
     html { scroll-behavior: smooth; }
-    section[id] { scroll-margin-top: 88px; }
-    ::selection { background: rgba(30, 58, 138, .15); }
-    .reveal { will-change: transform, opacity; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+    body { overscroll-behavior: none; } /* required for the pinned horizontal strip */
+
+    /* ===== Anchor offset so fixed navbar never covers section headings ===== */
+    section[id] { scroll-margin-top: 96px; }
+
+    /* ===== Brand text selection color ===== */
+    ::selection { background: #C9A227; color: #07182B; }
+
+    /* ===== Accessible focus ring for keyboard users ===== */
+    :focus-visible { outline: 2px solid #DDBB5F; outline-offset: 3px; border-radius: 4px; }
+
+    /* ===== SCROLL PROGRESS BAR (top of viewport, gold) ===== */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #C9A227, #E7C878);
+      transform-origin: left center; z-index: 80; pointer-events: none;
     }
+
+    /* ===== FILM GRAIN OVERLAY (subtle premium texture, pure SVG noise) ===== */
+    .grain-overlay {
+      position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* ===== HERO BACKGROUND GLOWS (layered radial gradients) ===== */
+    .hero-glow {
+      background:
+        radial-gradient(60rem 40rem at 85% -10%, rgba(201,162,39,.16), transparent 60%),
+        radial-gradient(50rem 36rem at -10% 110%, rgba(31,78,121,.45), transparent 60%),
+        linear-gradient(180deg, #07182B 0%, #0A2239 60%, #07182B 100%);
+    }
+
+    /* ===== TICKER / MARQUEE BAND (infinite horizontal scroll) ===== */
+    @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker-track { display: flex; width: max-content; animation: ticker-scroll 24s linear infinite; }
+    .ticker-band { transform: scale(1.02); }
+
+    /* ===== SCROLL CUE BOUNCE (hero bottom) ===== */
+    @keyframes cue-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+    .animate-cue { animation: cue-bounce 1.8s ease-in-out infinite; }
+
+    /* ===== HORIZONTAL PLATFORM STRIP (pinned scroll scene) ===== */
+    .hstrip { height: 100vh; }
+    .platform-panel { flex: 0 0 100vw; height: 100vh; }
+
+    /* ===== GHOST OUTLINE NUMBERS (decorative oversized numerals) ===== */
+    .ghost-number {
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(221, 187, 95, .22);
+      font-family: 'Fraunces', Georgia, serif;
+      line-height: .8; user-select: none;
+    }
+
+    /* ===== PRIORITIES SVG PATH (drawn on scroll) ===== */
+    #priorities-line-path { stroke: #C9A227; }
+    .tracer-dot {
+      position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 9999px;
+      background: #DDBB5F; box-shadow: 0 0 0 6px rgba(201,162,39,.25), 0 0 24px rgba(201,162,39,.6);
+      z-index: 10; pointer-events: none;
+    }
+
+    /* ===== DONATION PRESET BUTTON STATES ===== */
+    .preset-btn { transition: all .2s ease; }
+    .preset-active { background: #C9A227 !important; color: #07182B !important; border-color: #C9A227 !important; }
+
+    /* ===== NAV SCROLLED STATE (toggled by JS) ===== */
+    .nav-scrolled { background: rgba(7,24,43,.92); box-shadow: 0 8px 30px rgba(0,0,0,.35); }
+
+    /* ===== MOBILE MENU OVERLAY TRANSITION ===== */
+    #mobile-menu { transition: opacity .3s ease, visibility .3s ease; }
+    #mobile-menu.menu-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #mobile-menu.menu-visible { opacity: 1; visibility: visible; }
+
+    /* ===== CARD HOVER LIFT (about + involvement cards) ===== */
+    .lift-card { transition: transform .35s ease, box-shadow .35s ease; }
+    .lift-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -18px rgba(7,24,43,.28); }
