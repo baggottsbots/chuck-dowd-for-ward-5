@@ -431,16 +431,17 @@
       </button>
     </div>
 
-    <!-- Mobile menu overlay (inside navbar section) -->
-    <div id="mobile-menu" class="menu-hidden fixed inset-0 z-40 bg-navy-950/98 backdrop-blur-lg flex flex-col items-center justify-center gap-8">
-      <button id="menu-close" class="absolute top-5 right-4 w-11 h-11 rounded-lg border border-white/20 text-2xl leading-none" aria-label="Close menu">&times;</button>
-      <a href="#about" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">About</a>
-      <a href="#platform" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Platform</a>
-      <a href="#priorities" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Priorities</a>
-      <a href="#get-involved" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Get Involved</a>
-      <a href="#donate" class="mobile-link bg-gold-500 text-navy-950 font-bold text-xl px-10 py-4 rounded-full">Donate</a>
-    </div>
   </nav>
+
+  <!-- Mobile menu overlay: direct child of body so the fixed navbar's stacking context can't affect it -->
+  <div id="mobile-menu" class="menu-hidden fixed inset-0 z-[100] bg-navy-950 flex flex-col items-center justify-center gap-8">
+    <button id="menu-close" class="absolute top-5 right-4 w-11 h-11 rounded-lg border border-white/20 text-2xl leading-none text-white" aria-label="Close menu">&times;</button>
+    <a href="#about" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">About</a>
+    <a href="#platform" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Platform</a>
+    <a href="#priorities" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Priorities</a>
+    <a href="#get-involved" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Get Involved</a>
+    <a href="#donate" class="mobile-link bg-gold-500 text-navy-950 font-bold text-xl px-10 py-4 rounded-full">Donate</a>
+  </div>
 
   <main>
 
