@@ -74,7 +74,7 @@
     .nav-scrolled { background: rgba(7,24,43,.92); box-shadow: 0 8px 30px rgba(0,0,0,.35); }
 
     /* ===== MOBILE MENU OVERLAY TRANSITION ===== */
-    #mobile-menu { transition: opacity .3s ease, visibility .3s ease; }
+    #mobile-menu { transition: opacity .3s ease, visibility .3s ease; background: #07182B; }
     #mobile-menu.menu-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
     #mobile-menu.menu-visible { opacity: 1; visibility: visible; }
 
