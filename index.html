@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <!-- ========================================================================== -->
   <!-- HEAD: Meta, fonts, Tailwind CDN, design tokens, and custom CSS             -->
   <!-- Campaign: Chuck Dowd for Ward 5 — Hilton Head Island Town Council          -->
@@ -12,8 +11,8 @@
 
   <!-- ===== FONT LOADING: Fraunces (display serif) + Inter (UI sans) ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- ===== TAILWIND CSS PLAY CDN ===== -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -416,7 +415,7 @@
 
       <!-- Desktop links (same-page anchors only) -->
       <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#about" class="text-white/80 hover:text-gold-300 transition-colors">About</a>
+        <a href="#why-chuck" class="text-white/80 hover:text-gold-300 transition-colors">Why Chuck</a>
         <a href="#platform" class="text-white/80 hover:text-gold-300 transition-colors">Platform</a>
         <a href="#priorities" class="text-white/80 hover:text-gold-300 transition-colors">Priorities</a>
         <a href="#get-involved" class="text-white/80 hover:text-gold-300 transition-colors">Get Involved</a>
@@ -435,8 +434,8 @@
 
   <!-- Mobile menu overlay: direct child of body so the fixed navbar's stacking context can't affect it -->
   <div id="mobile-menu" class="menu-hidden fixed inset-0 z-[100] bg-navy-950 flex flex-col items-center justify-center gap-8">
-    <button id="menu-close" class="absolute top-5 right-4 w-11 h-11 rounded-lg border border-white/20 text-2xl leading-none text-white" aria-label="Close menu">&times;</button>
-    <a href="#about" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">About</a>
+    <button id="menu-close" class="absolute top-5 right-4 w-11 h-11 rounded-lg border border-white/20 text-2xl leading-none text-white" aria-label="Close menu">×</button>
+    <a href="#why-chuck" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Why Chuck</a>
     <a href="#platform" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Platform</a>
     <a href="#priorities" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Priorities</a>
     <a href="#get-involved" class="mobile-link font-display text-4xl text-white hover:text-gold-300 transition-colors">Get Involved</a>
@@ -456,9 +455,9 @@
         <!-- Campaign badge -->
         <div class="hero-badge w-fit mx-auto flex items-center gap-2.5 border border-gold-500/40 bg-gold-500/10 rounded-full px-4 py-2 mb-8">
           <svg viewBox="0 0 24 24" class="w-4 h-4 text-gold-400" fill="currentColor" aria-hidden="true">
-            <path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.35 6.47L12 16.77 6.05 20l1.35-6.47-4.9-4.55 6.6-.72L12 2z"/>
+            <path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.35 6.47L12 16.77 6.05 20l1.35-6.47-4.9-4.55 6.6-.72L12 2z"></path>
           </svg>
-          <span class="text-[9px] xs:text-[10px] sm:text-sm font-semibold tracking-[0.1em] sm:tracking-[0.18em] uppercase text-gold-300 whitespace-nowrap">Hilton Head Island Town Council &middot; Ward 5</span>
+          <span class="text-[9px] xs:text-[10px] sm:text-sm font-semibold tracking-[0.1em] sm:tracking-[0.18em] uppercase text-gold-300 whitespace-nowrap">Hilton Head Island Town Council · Ward 5</span>
         </div>
 
         <!-- Text + portrait row: image sits to the right of the headline on every breakpoint -->
@@ -469,7 +468,7 @@
             <h1 id="hero-headline" class="font-display font-semibold text-[clamp(1.9rem,7.5vw,6.5rem)] leading-[1.02] tracking-tight">
               <span class="block">Keep Ward 5</span>
               <span class="block">Safe. Moving.</span>
-              <span class="block font-display font-bold text-gold-400">Livable.</span>
+              <span class="block font-display font-bold text-gold-400">Livable. Tech-Ready.</span>
             </h1>
           </div>
 
@@ -481,31 +480,30 @@
 
         <!-- Supporting copy: centered below the headline + portrait row -->
         <p class="hero-sub mt-7 max-w-2xl mx-auto text-center text-base sm:text-lg text-white/75 leading-relaxed">
-          Retired NYPD Assistant Chief. 34 years of public service. Now running for Town Council to bring proven, practical solutions and calm, crisis-tested experience to Ward 5 &mdash; Sea Pines, South Forest Beach, and Coligny.
+          Retired NYPD Assistant Chief. 34 years of executive public safety leadership. Now running for Town Council to bring proven, practical solutions and crisis-tested experience to Ward 5.
         </p>
 
         <!-- Primary CTA: centered below the headline + portrait row -->
         <div class="hero-cta mt-7 w-full flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-          <a href="#get-involved" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-5 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base transition-all hover:shadow-[0_16px_40px_-12px_rgba(201,162,39,.55)] text-center">Join the Campaign</a>
+          <a href="#get-involved" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-5 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base transition-all hover:shadow-[0_16px_40px_-12px_rgba(201,162,39,.55)] text-center">Vote Chuck Dowd</a>
         </div>
 
         <!-- Credential stats row -->
         <div class="mt-16 pt-10 border-t border-white/10 grid gap-8 md:grid-cols-3">
-          <!-- Stat 1: animated counter -->
+          <!-- Stat 1: years of service -->
           <div class="hero-stat">
             <p class="font-display text-4xl sm:text-5xl font-semibold text-gold-400"><span class="counter" data-target="34">0</span> <span class="text-2xl sm:text-3xl text-white">Years</span></p>
-            <p class="mt-2 text-sm text-white/60 leading-relaxed">NYPD public service, retiring as Assistant Chief</p>
+            <p class="mt-2 text-sm text-white/60 leading-relaxed">Executive Public Safety Leader, Retired NYPD Assistant Chief</p>
           </div>
-          <!-- Stat 2 -->
+          <!-- Stat 2: crisis management -->
           <div class="hero-stat">
             <p class="font-display text-4xl sm:text-5xl font-semibold text-white">9/11 &amp; <span class="text-gold-400">Sandy</span></p>
-            <p class="mt-2 text-sm text-white/60 leading-relaxed">Commanded NYC 911 operations through the city's toughest crises</p>
+            <p class="mt-2 text-sm text-white/60 leading-relaxed">Proven Crisis Manager—9-1-1 leadership during catastrophic events</p>
           </div>
-          <!-- Stat 3 -->
+          <!-- Stat 3: technology focus -->
           <div class="hero-stat">
-            <p class="font-display text-4xl sm:text-5xl font-semibold text-white">FirstNet <span class="text-gold-400">Board</span></p>
-
-            <p class="mt-2 text-sm text-white/60 leading-relaxed">Inaugural board member of the nationwide public-safety broadband network</p>
+            <p class="font-display text-4xl sm:text-5xl font-semibold text-white"><span class="text-gold-400">Tech</span>-Ready</p>
+            <p class="mt-2 text-sm text-white/60 leading-relaxed">Championing modern public safety technology & smart infrastructure</p>
           </div>
         </div>
       </div>
@@ -513,7 +511,7 @@
       <!-- Scroll cue -->
       <div class="scroll-cue absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/50">
         <span class="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 animate-cue" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 animate-cue" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
       </div>
     </section>
 
@@ -523,59 +521,106 @@
     <div data-section="ticker" class="relative z-20 -my-4 overflow-hidden">
       <div class="ticker-band bg-gold-500 text-navy-950 py-3.5 border-y-4 border-navy-950">
         <div class="ticker-track font-display font-semibold text-lg sm:text-xl tracking-wide">
-          <span class="whitespace-nowrap pr-8">KEEP WARD 5 SAFE &#9733; KEEP WARD 5 MOVING &#9733; KEEP WARD 5 LIVABLE &#9733;&nbsp;</span>
-          <span class="whitespace-nowrap pr-8" aria-hidden="true">KEEP WARD 5 SAFE &#9733; KEEP WARD 5 MOVING &#9733; KEEP WARD 5 LIVABLE &#9733;&nbsp;</span>
+          <span class="whitespace-nowrap pr-8">SAFE STREETS ★ MOVING TRAFFIC ★ PROTECTED NEIGHBORHOODS ★&nbsp;</span>
+          <span class="whitespace-nowrap pr-8" aria-hidden="true">SAFE STREETS ★ MOVING TRAFFIC ★ PROTECTED NEIGHBORHOODS ★&nbsp;</span>
         </div>
       </div>
     </div>
 
     <!-- ============================================================================ -->
-    <!-- ABOUT SECTION: Bio narrative + three leadership credential cards             -->
+    <!-- CAMPAIGN ANNOUNCEMENT VIDEO: Full-width embedded YouTube video section       -->
+    <!-- Features: Responsive iframe embed, hero styling, messaging                   -->
+    <!-- ============================================================================ -->
+    <section data-section="announcement-video" class="relative bg-navy-950 py-20 sm:py-28 overflow-hidden">
+      <!-- Decorative background glow -->
+      <div class="absolute -top-32 right-0 w-96 h-96 rounded-full bg-gold-500/5 blur-3xl" aria-hidden="true"></div>
+      
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+        <!-- Section intro -->
+        <div class="reveal text-center mb-12 max-w-3xl mx-auto">
+          <p class="text-xs font-bold tracking-[0.3em] uppercase text-gold-400 mb-4">Campaign Announcement</p>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-white mb-4">Watch Chuck's Message</h2>
+          <p class="text-white/70 text-lg">Hear directly from Chuck about his vision for Ward 5, Hilton Head Island, and the leadership that matters.</p>
+        </div>
+
+        <!-- Video embed container -->
+        <div class="reveal relative w-full max-w-4xl mx-auto">
+          <!-- Responsive aspect ratio container (16:9) -->
+          <div class="relative w-full" style="padding-bottom: 56.25%;">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl"
+              src="https://www.youtube.com/embed/IVZmdQTGvo4?rel=0&modestbranding=1&fs=1"
+              title="Chuck Dowd for Ward 5 - Campaign Announcement"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen=""
+              loading="lazy"
+              style="border: none;">
+            </iframe>
+          </div>
+          
+          <!-- Decorative border frame (subtle gold accent) -->
+          <div class="absolute -inset-1 rounded-2xl border-2 border-gold-500/30 pointer-events-none" aria-hidden="true"></div>
+        </div>
+
+        <!-- Call to action below video -->
+        <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+          <a href="#get-involved" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-8 py-4 rounded-full transition-all hover:shadow-[0_16px_40px_-12px_rgba(201,162,39,.55)] text-center">
+            Vote Chuck Dowd
+          </a>
+          <a href="#donate" class="border-2 border-gold-500 hover:bg-gold-500 hover:text-navy-950 text-gold-300 font-bold px-8 py-4 rounded-full transition-colors text-center">
+            Support the Campaign
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- WHY CHUCK SECTION: Core qualifications and leadership experience             -->
     <!-- Features: Scroll batch reveals, hover lift cards, fact chips                 -->
     <!-- ============================================================================ -->
-    <section data-section="about" id="about" class="bg-cream-50 text-navy-900 py-24 sm:py-32">
+    <section data-section="why-chuck" id="why-chuck" class="bg-cream-50 text-navy-900 py-24 sm:py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid gap-14 lg:grid-cols-2 lg:gap-20">
 
         <!-- Left column: narrative -->
         <div class="reveal">
-          <p class="text-xs font-bold tracking-[0.3em] uppercase text-gold-600 mb-4">About Chuck</p>
-          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-navy-900">A lifetime of service.<br><span class="font-display font-bold text-gold-600">A steady hand.</span></h2>
+          <p class="text-xs font-bold tracking-[0.3em] uppercase text-gold-600 mb-4">Why Chuck</p>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-navy-900">Executive public safety leader <span class="text-gold-600">with results.</span></h2>
           <p class="mt-6 text-navy-800/80 leading-relaxed">
-            Chuck Dowd spent 34 years serving the people of New York City, retiring as an Assistant Chief of the NYPD. He commanded the NYPD's Office of Information Technology and Communications Division, with direct oversight of the nation's busiest 9-1-1 operation &mdash; more than 12 million calls a year &mdash; and a radio system dispatching 4.5 million emergency runs annually.
+            Chuck Dowd spent 34 years in executive public safety leadership, retiring as an Assistant Chief of the NYPD. He commanded critical operations including the nation's busiest 9-1-1 center, handling over 12 million calls annually and dispatching 4.5 million emergency runs per year.
           </p>
           <p class="mt-4 text-navy-800/80 leading-relaxed">
-            He commanded the NYC 9-1-1 center on September 11, 2001, through the 2003 Northeast Blackout, and during Hurricane Sandy. In 2012 he was appointed to the inaugural Board of Directors of FirstNet, the nationwide public safety broadband network now used by over 35,000 agencies. Today Chuck lives in Sea Pines with his wife Madeline, a retired NYPD Detective.
+            He led 9-1-1 operations on September 11, 2001, through the 2003 Northeast Blackout, and during Hurricane Sandy. Today he lives in Sea Pines with his wife Madeline, a retired NYPD Detective, ready to bring that same crisis-tested leadership and technology-driven solutions to Ward 5.
           </p>
           <!-- Fact chips -->
           <div class="mt-8 flex flex-wrap gap-3">
-            <span class="text-xs font-semibold uppercase tracking-wider bg-navy-900 text-cream-50 px-4 py-2 rounded-full">Retired NYPD Assistant Chief</span>
-            <span class="text-xs font-semibold uppercase tracking-wider bg-navy-900 text-cream-50 px-4 py-2 rounded-full">FirstNet Board Member</span>
-            <span class="text-xs font-semibold uppercase tracking-wider bg-gold-500 text-navy-950 px-4 py-2 rounded-full">Sea Pines Resident, Ward 5</span>
+            <span class="text-xs font-semibold uppercase tracking-wider bg-navy-900 text-cream-50 px-4 py-2 rounded-full">34 Years Public Safety</span>
+            <span class="text-xs font-semibold uppercase tracking-wider bg-navy-900 text-cream-50 px-4 py-2 rounded-full">Proven Crisis Manager</span>
+            <span class="text-xs font-semibold uppercase tracking-wider bg-gold-500 text-navy-950 px-4 py-2 rounded-full">Tech-Forward Leader</span>
           </div>
-          <p class="mt-8 font-display italic text-2xl text-navy-800">&mdash; Chuck Dowd</p>
+          <p class="mt-8 font-display italic text-2xl text-navy-800">— Chuck Dowd</p>
         </div>
 
-        <!-- Right column: numbered credential cards -->
+        <!-- Right column: three credential cards -->
         <div class="space-y-6">
-          <!-- Card 01 -->
+          <!-- Card 01: 34 Years -->
           <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-8 relative overflow-hidden">
             <span class="ghost-number absolute -right-2 -top-4 text-8xl" aria-hidden="true">01</span>
-            <h3 class="font-display font-semibold text-2xl relative">Crisis-tested leadership</h3>
-            <p class="mt-3 text-navy-800/75 leading-relaxed relative">Commanded the NYC 9-1-1 center on September 11th, through the 2003 Northeast Blackout, and during Hurricane Sandy. Also served as Detective Lieutenant for the 79th Detective Squad, supervising over 300 homicide investigations.</p>
+            <h3 class="font-display font-semibold text-2xl relative">34 Years Executive Public Safety Leader</h3>
+            <p class="mt-3 text-navy-800/75 leading-relaxed relative">Retired NYPD Assistant Chief commanding the nation's busiest 9-1-1 center with 12+ million calls annually and overseeing emergency dispatch operations across New York City.</p>
             <div class="mt-5 h-1 w-16 bg-gold-500 rounded-full"></div>
           </article>
-          <!-- Card 02 -->
+          <!-- Card 02: Crisis Manager -->
           <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-8 relative overflow-hidden">
             <span class="ghost-number absolute -right-2 -top-4 text-8xl" aria-hidden="true">02</span>
-            <h3 class="font-display font-semibold text-2xl relative">Modernizing public safety systems</h3>
-            <p class="mt-3 text-navy-800/75 leading-relaxed relative">Led the merger of police, fire, EMS, and 9-1-1 dispatch into a unified $2 billion Public Safety Answering Center, and integrated NYC's 3-1-1 line with 9-1-1 to improve citywide efficiency.</p>
+            <h3 class="font-display font-semibold text-2xl relative">Proven Crisis Manager</h3>
+            <p class="mt-3 text-navy-800/75 leading-relaxed relative">Led 9-1-1 operations during September 11, 2001, the 2003 Northeast Blackout, and Hurricane Sandy. Crisis-tested leadership ready for Ward 5.</p>
             <div class="mt-5 h-1 w-16 bg-gold-500 rounded-full"></div>
           </article>
-          <!-- Card 03 -->
+          <!-- Card 03: Technology-Driven -->
           <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-8 relative overflow-hidden">
             <span class="ghost-number absolute -right-2 -top-4 text-8xl" aria-hidden="true">03</span>
-            <h3 class="font-display font-semibold text-2xl relative">Rooted in Ward 5</h3>
-            <p class="mt-3 text-navy-800/75 leading-relaxed relative">Lives in Sea Pines with his wife Madeline, a retired NYPD Detective. Bachelor's degree from John Jay College of Criminal Justice. Proud father of three and grandfather of two.</p>
+            <h3 class="font-display font-semibold text-2xl relative">Technology-Driven Solutions</h3>
+            <p class="mt-3 text-navy-800/75 leading-relaxed relative">Championing modern public safety technology and smart infrastructure for a safer, stronger Ward 5.</p>
             <div class="mt-5 h-1 w-16 bg-gold-500 rounded-full"></div>
           </article>
         </div>
@@ -589,16 +634,13 @@
     <section data-section="quote-band" class="relative h-[70vh] min-h-[480px] overflow-hidden flex items-center justify-center">
       <!-- Parallax image layer (taller than viewport so it can travel) -->
       <div class="absolute inset-0">
-        <img id="quote-parallax-img"
-             src="https://paymegpt.com/objects/quick-uploads/2/fcf2834e0a0651d1.png"
-             alt="Chuck Dowd"
-             class="w-full h-[135%] object-cover -mt-[8%]" loading="lazy">
+        <img id="quote-parallax-img" src="https://paymegpt.com/objects/quick-uploads/2/efb21dc6a5cde6e0.png" alt="Ward 5 Campaign" class="w-full h-[135%] object-cover -mt-[8%]" loading="lazy">
       </div>
       <div class="absolute inset-0 bg-navy-950/70" aria-hidden="true"></div>
 
       <!-- Pull quote -->
       <div class="quote-content relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-        <svg viewBox="0 0 24 24" class="w-10 h-10 mx-auto mb-6 text-gold-400" fill="currentColor" aria-hidden="true"><path d="M10 7H6a3 3 0 00-3 3v7h7v-7H7c0-1.7 1.3-3 3-3V7zm11 0h-4a3 3 0 00-3 3v7h7v-7h-3c0-1.7 1.3-3 3-3V7z"/></svg>
+        <svg viewBox="0 0 24 24" class="w-10 h-10 mx-auto mb-6 text-gold-400" fill="currentColor" aria-hidden="true"><path d="M10 7H6a3 3 0 00-3 3v7h7v-7H7c0-1.7 1.3-3 3-3V7zm11 0h-4a3 3 0 00-3 3v7h7v-7h-3c0-1.7 1.3-3 3-3V7z"></path></svg>
         <blockquote class="font-display font-semibold text-2xl sm:text-4xl lg:text-[2.75rem] leading-snug">
           Ward 5 needs decisive leadership, <span class="text-gold-300">not council gridlock.</span>
         </blockquote>
@@ -608,7 +650,7 @@
 
     <!-- ============================================================================ -->
     <!-- PLATFORM SECTION: Pinned horizontal snap strip (GSAP ScrollTrigger)          -->
-    <!-- Features: 4 full-viewport panels, scrubbed horizontal scroll, snap, dots     -->
+    <!-- Features: 4 full-viewport panels with platform pillars, scrubbed scroll     -->
     <!-- ============================================================================ -->
     <section data-section="platform" id="platform" class="relative bg-navy-950 overflow-hidden">
       <div class="hstrip flex" style="width: 500vw;">
@@ -618,10 +660,10 @@
           <div class="max-w-3xl mx-auto px-6 sm:px-10">
             <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-gold-400 mb-5">The Platform</p>
             <h2 class="panel-anim font-display font-semibold text-4xl sm:text-6xl leading-tight">Public Safety First. <span class="text-gold-400">Quality of Life Always.</span></h2>
-            <p class="panel-anim mt-6 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Actionable, data-driven solutions for Sea Pines, South Forest Beach, and Coligny.</p>
+            <p class="panel-anim mt-6 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Tech-enabled solutions for public safety, transportation, growth, and results-based governance in Ward 5.</p>
             <div class="panel-anim mt-10 flex items-center gap-3 text-gold-300 text-sm font-semibold uppercase tracking-[0.25em]">
               <span>Scroll to explore</span>
-              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
             </div>
           </div>
           <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">5</span>
@@ -632,71 +674,71 @@
           <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">01</span>
           <div class="max-w-3xl mx-auto px-6 sm:px-10 relative z-10">
             <div class="panel-anim w-16 h-16 rounded-2xl bg-gold-500/15 border border-gold-500/40 flex items-center justify-center mb-7">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg>
             </div>
             <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-gold-400 mb-3">Pillar 01</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Public Safety &amp; Neighborhood Security</h3>
-            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Restore peace of mind and proactively protect high-density public spaces and residential areas.</p>
+            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Public Safety</h3>
+            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Proactive use of technology to maintain safe spaces and address problems before they occur.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Smart cameras, license plate readers, and lighting at Coligny Circle, beach access, and Pope Avenue</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Unified comms across the Sheriff's Office, Fire Rescue, and Sea Pines Security</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Enforce public-order laws; stop violent disturbances and illegal firearms early</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Establish public safety policies that focus on Island priorities</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Strategies that work to protect our island's roads and public spaces</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Smart cameras, license plate readers, and real-time monitoring</li>
             </ul>
           </div>
         </div>
 
-        <!-- PANEL 2: Transportation Technology -->
+        <!-- PANEL 2: Smarter Transportation -->
         <div class="platform-panel relative flex items-center bg-navy-800">
           <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">02</span>
           <div class="max-w-3xl mx-auto px-6 sm:px-10 relative z-10">
             <div class="panel-anim w-16 h-16 rounded-2xl bg-gold-500/15 border border-gold-500/40 flex items-center justify-center mb-7">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="5" r="2.2"/><path d="M8.2 19H15a3 3 0 003-3v-2a3 3 0 00-3-3H9a3 3 0 01-3-3V7a3 3 0 013-3h6.8"/></svg>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2.2"></circle><circle cx="18" cy="5" r="2.2"></circle><path d="M8.2 19H15a3 3 0 003-3v-2a3 3 0 00-3-3H9a3 3 0 01-3-3V7a3 3 0 013-3h6.8"></path></svg>
             </div>
             <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-gold-400 mb-3">Pillar 02</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Smart Traffic &amp; Corridor Mobility</h3>
-            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Solve congestion around Sea Pines Circle and Coligny using real-time data instead of static guesswork.</p>
+            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Smarter Transportation</h3>
+            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Traffic management using real-time adaptive tech that solves gridlock.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Adaptive signal timing on Pope Avenue, Greenwood Drive, and Sea Pines Circle</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Priority corridors for first responders and severe-weather evacuations</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Continuous traffic monitoring to find and fix bottlenecks</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Adaptive signal timing on key corridors to ease congestion</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Alternative transportation solutions for Island residents and workforce</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Continuous traffic monitoring to identify and fix bottlenecks</li>
             </ul>
           </div>
         </div>
 
-        <!-- PANEL 3: Community Commitment -->
+        <!-- PANEL 3: Responsible Growth -->
         <div class="platform-panel relative flex items-center bg-navy-900">
           <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">03</span>
           <div class="max-w-3xl mx-auto px-6 sm:px-10 relative z-10">
             <div class="panel-anim w-16 h-16 rounded-2xl bg-gold-500/15 border border-gold-500/40 flex items-center justify-center mb-7">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87"></path><path d="M16 3.13a4 4 0 010 7.75"></path></svg>
             </div>
             <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-gold-400 mb-3">Pillar 03</p>
             <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Responsible Growth</h3>
-            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Safeguard green space, manage commercial density, and preserve the character of Ward 5.</p>
+            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Maintain our Island's character and culture through thoughtful growth.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Enforce zoning; no high-density rezoning that changes Sea Pines</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Protect our island's unique tree canopy, waterway, and beach environments</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Enforce our Town's policies that monitor short-term rentals</li>
               <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>New projects must prove no harm to traffic, drainage, or emergency response</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Protect tree canopy, watersheds, and beaches</li>
             </ul>
           </div>
         </div>
 
-        <!-- PANEL 4: Results-First Government -->
+        <!-- PANEL 4: Results-First Governance -->
         <div class="platform-panel relative flex items-center bg-navy-800">
           <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">04</span>
           <div class="max-w-3xl mx-auto px-6 sm:px-10 relative z-10">
             <div class="panel-anim w-16 h-16 rounded-2xl bg-gold-500/15 border border-gold-500/40 flex items-center justify-center mb-7">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path></svg>
             </div>
             <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-gold-400 mb-3">Pillar 04</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Results-First Government</h3>
-            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">End Town Council gridlock and deliver measurable outcomes for taxpayers.</p>
+            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Results-First Governance</h3>
+            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Building a more collaborative Town Council with measurable outcomes.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Break gridlock among Town, County, and Property Owners Associations</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Budget audits and hard deadlines on capital projects</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Routine listening sessions and direct feedback channels for Ward 5</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Building a more collaborative Town Council</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Establish a unity of purpose between the Town and County Councils</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-gold-400 shrink-0"></span>Tech tools to improve town responsiveness to residential and commercial needs</li>
             </ul>
-            <a href="#get-involved" class="panel-anim inline-block mt-9 bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-8 py-3.5 rounded-full transition-colors">Get Involved</a>
+            <a href="#get-involved" class="panel-anim inline-block mt-9 bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-8 py-3.5 rounded-full transition-colors">Vote Chuck</a>
           </div>
         </div>
       </div>
@@ -712,69 +754,57 @@
     </section>
 
     <!-- ============================================================================ -->
-    <!-- PRIORITIES SECTION: "On the Ground" with scroll-drawn SVG path timeline      -->
-    <!-- Features: Scrubbed stroke-dashoffset draw, glowing tracer dot, card reveals  -->
+    <!-- PRIORITIES SECTION: Platform implementation and real results                 -->
+    <!-- Features: Scroll batch reveals, card animations                              -->
     <!-- ============================================================================ -->
     <section data-section="priorities" id="priorities" class="bg-cream-50 text-navy-900 py-24 sm:py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
         <!-- Section header -->
         <div class="reveal max-w-3xl mx-auto text-center">
-          <p class="text-xs font-bold tracking-[0.3em] uppercase text-gold-600 mb-4">On the Ground</p>
-          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight">Experience that turns into <span class="italic text-gold-600">action</span></h2>
-          <p class="mt-5 text-navy-800/75 leading-relaxed">Chuck's approach to Ward 5 is simple: anticipate problems, coordinate across agencies, and let data &mdash; not guesswork &mdash; guide decisions. Here's what that looks like in Sea Pines, South Forest Beach, and Coligny.</p>
-          <a href="#platform" class="inline-block mt-7 border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-cream-50 font-semibold px-7 py-3 rounded-full transition-colors">Explore the full platform</a>
+          <p class="text-xs font-bold tracking-[0.3em] uppercase text-gold-600 mb-4">Real Results</p>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight">Results-based action with <span class="italic text-gold-600">defined timelines</span></h2>
+          <p class="mt-5 text-navy-800/75 leading-relaxed">Chuck's approach to Ward 5 combines crisis-tested leadership with modern technology. Anticipate problems, coordinate across agencies, and let data guide decisions.</p>
         </div>
 
-        <!-- Timeline track: SVG line + tracer + milestone cards -->
-        <div id="priorities-track" class="relative mt-20">
+        <!-- Priority cards -->
+        <div class="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 
-          <!-- Drawn path (S-curve down the section) -->
-          <svg class="absolute top-0 left-3 w-8 h-full md:left-1/2 md:w-24 md:-translate-x-1/2" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
-            <!-- Faint full-length track -->
-            <path d="M50,0 C82,120 18,240 50,360 C82,480 18,600 50,720 C82,840 18,920 50,1000"
-                  fill="none" stroke="rgba(10,34,57,.12)" stroke-width="3" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
-            <!-- Gold progress line (drawn on scroll) -->
-            <path id="priorities-line-path" d="M50,0 C82,120 18,240 50,360 C82,480 18,600 50,720 C82,840 18,920 50,1000"
-                  fill="none" stroke-width="3" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
-          </svg>
+          <!-- Card 1: Smart Traffic -->
+          <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-8">
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <h3 class="font-display font-semibold text-xl text-navy-900">Smart Traffic</h3>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-500 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2.2"></circle><circle cx="18" cy="5" r="2.2"></circle><path d="M8.2 19H15a3 3 0 003-3v-2a3 3 0 00-3-3H9a3 3 0 01-3-3V7a3 3 0 013-3h6.8"></path></svg>
+            </div>
+            <p class="text-navy-800/75 leading-relaxed">Adaptive signal timing on key corridors, easing gridlock with real-time data.</p>
+          </article>
 
-          <!-- Glowing tracer dot riding the line (MotionPathPlugin) -->
-          <div class="tracer-dot" aria-hidden="true"></div>
+          <!-- Card 2: Infrastructure First -->
+          <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-8">
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <h3 class="font-display font-semibold text-xl text-navy-900">Infrastructure First</h3>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-500 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path></svg>
+            </div>
+            <p class="text-navy-800/75 leading-relaxed">Every project must pass an Infrastructure Impact Test, protecting roads and emergency response.</p>
+          </article>
 
-          <!-- Milestone cards (alternate sides on desktop) -->
-          <div class="space-y-14 md:space-y-24 relative z-10">
+          <!-- Card 3: Public Safety Tech -->
+          <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-8">
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <h3 class="font-display font-semibold text-xl text-navy-900">Safety Tech</h3>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-500 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg>
+            </div>
+            <p class="text-navy-800/75 leading-relaxed">Modern cameras, monitoring, and coordination across agencies for proactive safety.</p>
+          </article>
 
-            <!-- Milestone 1 -->
-            <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-9 ml-14 md:ml-auto md:w-[46%] md:mr-[4%]">
-              <div class="flex items-start justify-between gap-4">
-                <span class="w-11 h-11 rounded-full bg-navy-900 text-gold-400 font-display font-semibold flex items-center justify-center shrink-0">1</span>
-                <svg viewBox="0 0 24 24" class="w-9 h-9 text-gold-500" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="18.5" cy="18" r="2.5"/></svg>
-              </div>
-              <h3 class="mt-5 font-sans font-bold text-2xl text-navy-900">Smart traffic management</h3>
-              <p class="mt-3 text-navy-800/75 leading-relaxed">Adaptive signals on Pope Avenue, Greenwood Drive, and Sea Pines Circle, with continuous monitoring to ease weekend peak bottlenecking.</p>
-            </article>
-
-            <!-- Milestone 2 -->
-            <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-9 ml-14 md:ml-[4%] md:w-[46%]">
-              <div class="flex items-start justify-between gap-4">
-                <span class="w-11 h-11 rounded-full bg-navy-900 text-gold-400 font-display font-semibold flex items-center justify-center shrink-0">2</span>
-                <svg viewBox="0 0 24 24" class="w-9 h-9 text-gold-500" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
-              </div>
-              <h3 class="mt-5 font-sans font-bold text-2xl text-navy-900">Infrastructure-first development</h3>
-              <p class="mt-3 text-navy-800/75 leading-relaxed">Every proposed project must pass an Infrastructure Impact Test, proving it won't degrade traffic flow, drainage, or emergency response times.</p>
-            </article>
-
-            <!-- Milestone 3 -->
-            <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-9 ml-14 md:ml-auto md:w-[46%] md:mr-[4%]">
-              <div class="flex items-start justify-between gap-4">
-                <span class="w-11 h-11 rounded-full bg-navy-900 text-gold-400 font-display font-semibold flex items-center justify-center shrink-0">3</span>
-                <svg viewBox="0 0 24 24" class="w-9 h-9 text-gold-500" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M8.5 12h7M12 8.5v7"/></svg>
-              </div>
-              <h3 class="mt-5 font-sans font-bold text-2xl text-navy-900">Stronger public safety coordination</h3>
-              <p class="mt-3 text-navy-800/75 leading-relaxed">Real-time interoperability between the Beaufort County Sheriff's Office, Hilton Head Island Fire Rescue, and Sea Pines Security.</p>
-            </article>
-          </div>
+          <!-- Card 4: Governance Results -->
+          <article class="reveal lift-card bg-white rounded-2xl border border-cream-200 p-7 sm:p-8">
+            <div class="flex items-start justify-between gap-4 mb-5">
+              <h3 class="font-display font-semibold text-xl text-navy-900">Governance</h3>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-gold-500 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path></svg>
+            </div>
+            <p class="text-navy-800/75 leading-relaxed">End gridlock with collaborative leadership, defined timelines, and tech-enabled transparency.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -782,7 +812,6 @@
     <!-- ============================================================================ -->
     <!-- DONATE SECTION: Preset + custom contribution with Stripe checkout            -->
     <!-- Features: Dynamic presets from __donationConfig, __processDonation() call    -->
-    <!-- REQUIRES: Email input (rendered below) before any donation is processed      -->
     <!-- ============================================================================ -->
     <section data-section="donate" id="donate" class="relative bg-navy-900 py-24 sm:py-32 overflow-hidden">
       <!-- Decorative gold glow -->
@@ -793,19 +822,19 @@
         <!-- Left column: pitch -->
         <div class="reveal">
           <p class="text-xs font-bold tracking-[0.3em] uppercase text-gold-400 mb-4">Donate</p>
-          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight">Fuel the campaign to keep <span class="italic text-gold-400">Ward 5 moving</span></h2>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight">Fuel the campaign to <span class="italic text-gold-400">keep Ward 5 moving</span></h2>
           <p class="mt-6 text-white/70 leading-relaxed max-w-xl">Your support helps us reach neighbors, share Chuck's message, and build the grassroots campaign Ward 5 deserves. Every contribution makes a difference.</p>
           <ul class="mt-8 space-y-4">
             <li class="flex items-center gap-3 text-white/85">
-              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
               Reach more neighbors across Ward 5
             </li>
             <li class="flex items-center gap-3 text-white/85">
-              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
               Share Chuck's message island-wide
             </li>
             <li class="flex items-center gap-3 text-white/85">
-              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
               Build the grassroots campaign Ward 5 deserves
             </li>
           </ul>
@@ -823,25 +852,21 @@
 
           <!-- Name (optional) -->
           <label for="donate-name" class="block mt-6 text-sm font-semibold">Full Name <span class="font-normal text-navy-800/50">(optional)</span></label>
-          <input id="donate-name" name="donate-name" type="text" autocomplete="name" placeholder="Your name"
-                 class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
+          <input id="donate-name" name="donate-name" type="text" autocomplete="name" placeholder="Your name" class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
 
           <!-- Email (REQUIRED for Stripe checkout) -->
           <label for="donate-email" class="block mt-4 text-sm font-semibold">Email Address <span class="text-gold-600">*</span></label>
-          <input id="donate-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
-                 class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
+          <input id="donate-email" name="email" type="email" required="" autocomplete="email" placeholder="you@example.com" class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
 
           <!-- Custom amount -->
           <label for="custom-amount" class="block mt-4 text-sm font-semibold">Custom Amount</label>
           <div class="mt-2 flex items-center rounded-xl border border-cream-200 bg-cream-50 focus-within:border-gold-500 focus-within:ring-2 focus-within:ring-gold-500/30 transition">
             <span class="pl-4 pr-1 text-navy-800/60 font-semibold">$</span>
-            <input id="custom-amount" name="custom-amount" type="number" min="1" step="1" inputmode="decimal" placeholder="Enter amount in dollars"
-                   class="w-full bg-transparent px-2 py-3 text-sm outline-none">
+            <input id="custom-amount" name="custom-amount" type="number" min="1" step="1" inputmode="decimal" placeholder="Enter amount in dollars" class="w-full bg-transparent px-2 py-3 text-sm outline-none">
           </div>
 
           <!-- Submit -->
-          <button id="donate-button" type="button"
-                  class="mt-6 w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-lg py-4 rounded-xl transition-all hover:shadow-[0_16px_40px_-12px_rgba(201,162,39,.6)]">
+          <button id="donate-button" type="button" class="mt-6 w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-lg py-4 rounded-xl transition-all hover:shadow-[0_16px_40px_-12px_rgba(201,162,39,.6)]">
             <span id="donate-button-label">Donate $100</span>
           </button>
 
@@ -863,21 +888,21 @@
         <!-- Left column: pitch + involvement options -->
         <div class="reveal">
           <p class="text-xs font-bold tracking-[0.3em] uppercase text-gold-600 mb-4">Get Involved</p>
-          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight">Add your name.<br><span class="italic text-gold-600">Move Ward 5 forward.</span></h2>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight">Vote Chuck Dowd.<br><span class="italic text-gold-600">Move Ward 5 forward.</span></h2>
           <p class="mt-6 text-navy-800/75 leading-relaxed max-w-xl">This campaign runs on neighbors like you. Whether you can knock doors, host a gathering, or simply stay informed, every supporter builds momentum for a stronger island.</p>
 
           <!-- Involvement option cards -->
           <div class="mt-9 grid sm:grid-cols-3 gap-4">
             <div class="lift-card bg-white rounded-2xl border border-cream-200 p-5 text-center">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 mx-auto text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 8.6a5 5 0 00-8.8-3.2A5 5 0 003.2 8.6c0 5 8.8 10.4 8.8 10.4s8.8-5.4 8.8-10.4z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 mx-auto text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 8.6a5 5 0 00-8.8-3.2A5 5 0 003.2 8.6c0 5 8.8 10.4 8.8 10.4s8.8-5.4 8.8-10.4z"></path></svg>
               <p class="mt-3 font-semibold text-sm">Volunteer</p>
             </div>
             <div class="lift-card bg-white rounded-2xl border border-cream-200 p-5 text-center">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 mx-auto text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 mx-auto text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h14V9.5"></path></svg>
               <p class="mt-3 font-semibold text-sm">Host an event</p>
             </div>
             <div class="lift-card bg-white rounded-2xl border border-cream-200 p-5 text-center">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 mx-auto text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-7v14l-18-7v-4z"/><path d="M11.6 16.8a3 3 0 11-5.8-1.6"/></svg>
+              <svg viewBox="0 0 24 24" class="w-8 h-8 mx-auto text-gold-600" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-7v14l-18-7v-4z"></path><path d="M11.6 16.8a3 3 0 11-5.8-1.6"></path></svg>
               <p class="mt-3 font-semibold text-sm">Spread the word</p>
             </div>
           </div>
@@ -888,7 +913,7 @@
           </div>
 
           <p class="mt-9 flex items-center gap-3 text-navy-800/80">
-            <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 7l-10 6L2 7"></path></svg>
             <span>Questions? Email us at <a href="mailto:chuckforhhi5@gmail.com" class="font-semibold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-600 transition-colors">chuckforhhi5@gmail.com</a></span>
           </p>
         </div>
@@ -900,32 +925,27 @@
           <p class="mt-1.5 text-sm text-navy-800/70">Share your details and tell us how you'd like to help. We'll be in touch.</p>
 
           <!-- Supporter form: submits via fetch() to the campaign webhook -->
-          <form id="supporter-form" class="mt-6 space-y-4" novalidate>
+          <form id="supporter-form" class="mt-6 space-y-4" novalidate="">
             <div>
               <label for="name" class="block text-sm font-semibold">Full Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name"
-                     class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
             </div>
             <div>
               <label for="email" class="block text-sm font-semibold">Email Address <span class="text-gold-600">*</span></label>
-              <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
-                     class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
+              <input id="email" name="email" type="email" required="" autocomplete="email" placeholder="you@example.com" class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
             </div>
             <div>
               <label for="phone" class="block text-sm font-semibold">Phone Number</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555"
-                     class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
             </div>
             <div>
               <label for="address" class="block text-sm font-semibold">Home Address</label>
-              <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Street, Hilton Head Island, SC"
-                     class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
+              <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Street, Hilton Head Island, SC" class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
               <p class="mt-1.5 text-xs text-navy-800/55">Helps us confirm you're in Ward 5. Optional.</p>
             </div>
             <div>
               <label for="interest-level" class="block text-sm font-semibold">How would you like to help?</label>
-              <select id="interest-level" name="interest-level"
-                      class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
+              <select id="interest-level" name="interest-level" class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition">
                 <option value="">Choose one (optional)</option>
                 <option value="Knock doors">Knock doors</option>
                 <option value="Host an event">Host an event</option>
@@ -937,11 +957,9 @@
             </div>
             <div>
               <label for="message" class="block text-sm font-semibold">Anything else you'd like to share?</label>
-              <textarea id="message" name="message" rows="4" placeholder="Questions, ideas for Ward 5, or anything else."
-                        class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition resize-y"></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Questions, ideas for Ward 5, or anything else." class="mt-2 w-full rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm focus:border-gold-500 focus:ring-2 focus:ring-gold-500/30 outline-none transition resize-y"></textarea>
             </div>
-            <button type="submit"
-                    class="w-full bg-navy-900 hover:bg-navy-800 text-cream-50 font-bold text-lg py-4 rounded-xl transition-colors">
+            <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-cream-50 font-bold text-lg py-4 rounded-xl transition-colors">
               Join the Campaign
             </button>
             <p class="text-xs text-navy-800/55 leading-relaxed">By submitting, you agree to receive campaign updates from Chuck Dowd for Ward 5.</p>
@@ -965,18 +983,18 @@
         <div>
           <div class="flex items-center gap-3">
             <span class="w-10 h-10 rounded-full bg-gold-500 flex items-center justify-center shrink-0">
-              <svg viewBox="0 0 24 24" class="w-5 h-5 text-navy-950" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.35 6.47L12 16.77 6.05 20l1.35-6.47-4.9-4.55 6.6-.72L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-navy-950" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.35 6.47L12 16.77 6.05 20l1.35-6.47-4.9-4.55 6.6-.72L12 2z"></path></svg>
             </span>
             <span class="font-display font-semibold text-xl">Chuck Dowd <span class="text-gold-400">for Ward 5</span></span>
           </div>
-          <p class="mt-4 text-sm text-white/60 leading-relaxed max-w-xs">Safe streets. Moving traffic. Protected neighborhoods.</p>
+          <p class="mt-4 text-sm text-white/60 leading-relaxed">Safe streets. Moving traffic. Protected neighborhoods.</p>
         </div>
 
         <!-- Explore column (same-page anchors only) -->
         <div>
           <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold-400 mb-5">Explore</p>
           <ul class="space-y-3 text-sm">
-            <li><a href="#about" class="text-white/70 hover:text-gold-300 transition-colors">About Chuck</a></li>
+            <li><a href="#why-chuck" class="text-white/70 hover:text-gold-300 transition-colors">Why Chuck</a></li>
             <li><a href="#platform" class="text-white/70 hover:text-gold-300 transition-colors">Platform</a></li>
             <li><a href="#priorities" class="text-white/70 hover:text-gold-300 transition-colors">Priorities</a></li>
             <li><a href="#get-involved" class="text-white/70 hover:text-gold-300 transition-colors">Get Involved</a></li>
@@ -989,15 +1007,15 @@
           <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold-400 mb-5">Contact</p>
           <ul class="space-y-3.5 text-sm text-white/70">
             <li class="flex items-center gap-3">
-              <svg viewBox="0 0 24 24" class="w-4.5 h-4.5 w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 7l-10 6L2 7"></path></svg>
               <a href="mailto:chuckforhhi5@gmail.com" class="hover:text-gold-300 transition-colors">chuckforhhi5@gmail.com</a>
             </li>
             <li class="flex items-center gap-3">
-              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"></path></svg>
               <a href="tel:+18432958380" class="hover:text-gold-300 transition-colors">843-295-8380</a>
             </li>
             <li class="flex items-center gap-3">
-              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               Hilton Head Island, SC
             </li>
           </ul>
@@ -1006,7 +1024,7 @@
 
       <!-- Compliance bar -->
       <div class="mt-14 pt-7 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
-        <p>&copy; 2026 Chuck Dowd for Ward 5. All rights reserved.</p>
+        <p>© 2026 Chuck Dowd for Ward 5. All rights reserved.</p>
         <p class="font-semibold tracking-wide">Paid for by Chuck for HHI 5.</p>
       </div>
     </div>
@@ -1191,28 +1209,6 @@
       });
     })();
 
-    /* ===== PRIORITIES SVG PATH DRAW + TRACER DOT =====
-       Function: the gold S-curve draws itself (strokeDashoffset scrub) while a
-       glowing dot rides the path via MotionPathPlugin across the timeline. */
-    (function () {
-      var line = document.getElementById('priorities-line-path');
-      if (!line) return;
-      var len = line.getTotalLength();
-      gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
-      gsap.set('.tracer-dot', { autoAlpha: 0 });
-
-      var tl = gsap.timeline({
-        scrollTrigger: { trigger: '#priorities-track', start: 'top 70%', end: 'bottom 65%', scrub: 1 }
-      });
-      tl.to(line, { strokeDashoffset: 0, ease: 'none', duration: 1 }, 0)
-        .to('.tracer-dot', { autoAlpha: 1, duration: 0.02 }, 0)
-        .to('.tracer-dot', {
-          motionPath: { path: '#priorities-line-path', align: '#priorities-line-path', alignOrigin: [0.5, 0.5] },
-          ease: 'none', duration: 1
-        }, 0)
-        .to('.tracer-dot', { autoAlpha: 0, duration: 0.05 }, 0.96);
-    })();
-
     /* ===== DONATION MODULE =====
        Function: initDonations() — renders preset buttons from the platform's
        window.__donationConfig.presets, manages selection + custom amount state,
@@ -1378,6 +1374,7 @@
        so pinned scenes and reveals stay pixel-accurate. */
     window.addEventListener('load', function () { ScrollTrigger.refresh(); });
   </script>
+
+
   <script src="script.js"></script>
-</body>
-</html>
+</body></html>
