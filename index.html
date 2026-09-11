@@ -259,7 +259,7 @@
   var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
   function t(k){var L=getLang();return (I18N[L]&&I18N[L][k])||I18N.en[k];}
   function fmtD(c){try{return new Intl.NumberFormat(getLocale(),{style:'currency',currency:currency}).format(c/100);}catch(e){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}}
-  window.__donationConfig={currency:currency,presets:[25,50,100,250,500],minAmount:500/100,maxAmount:500000/100,formatAmount:fmtD,buttonColor:'#1e3a8a',buttonText:'Donate Now',thankYouMessage:'Thank you for supporting Chuck Dowd for Ward 5! Your contribution makes a real difference.'};
+  window.__donationConfig={currency:currency,presets:[25,50,100,250,500,1000],minAmount:500/100,maxAmount:500000/100,formatAmount:fmtD,buttonColor:'#1e3a8a',buttonText:'Donate Now',thankYouMessage:'Thank you for supporting Chuck Dowd for Ward 5! Your contribution makes a real difference.'};
   function findDonEmail2(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
   function findDonName2(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
   function findDonPhone2(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
@@ -848,7 +848,7 @@
 
           <!-- Preset amounts (rendered dynamically from window.__donationConfig.presets) -->
           <p class="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-navy-800/60">Suggested amounts</p>
-          <div id="preset-amounts" class="mt-3 grid grid-cols-3 gap-3"></div>
+          <div id="preset-amounts" class="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-4"></div>
 
           <!-- Name (optional) -->
           <label for="donate-name" class="block mt-6 text-sm font-semibold">Full Name <span class="font-normal text-navy-800/50">(optional)</span></label>
@@ -1220,7 +1220,7 @@
        (object form, amount in DOLLARS) to launch Stripe Checkout. */
     (function initDonations() {
       var cfg = window.__donationConfig || {};
-      var presets = (Array.isArray(cfg.presets) && cfg.presets.length) ? cfg.presets : [25, 50, 100, 250, 500];
+      var presets = (Array.isArray(cfg.presets) && cfg.presets.length) ? cfg.presets : [25, 50, 100, 250, 500, 1000];
       var container = document.getElementById('preset-amounts');
       var customInput = document.getElementById('custom-amount');
       var emailInput = document.getElementById('donate-email');
