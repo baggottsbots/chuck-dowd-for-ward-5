@@ -1,0 +1,14 @@
+html { scroll-behavior: smooth; }
+    ::selection { background: #C9A227; color: #07182B; }
+    :focus-visible { outline: 2px solid #DDBB5F; outline-offset: 3px; border-radius: 4px; }
+    .article-body p { margin-bottom: 1.35rem; line-height: 1.8; }
+    .article-body p:first-of-type::first-letter {
+      float: left; font-family: 'Fraunces', Georgia, serif; font-weight: 700;
+      font-size: 4.2rem; line-height: 0.8; padding-right: 0.5rem; padding-top: 0.35rem;
+      color: #A9861D;
+    }
+    .hero-photo { box-shadow: 0 24px 60px -24px rgba(7,24,43,.35); }
+    .nav-scrolled { background: rgba(7,24,43,.94); box-shadow: 0 8px 30px rgba(0,0,0,.3); }
+    #mobile-menu { transition: opacity .3s ease, visibility .3s ease; background: #07182B; }
+    #mobile-menu.menu-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #mobile-menu.menu-visible { opacity: 1; visibility: visible; }
