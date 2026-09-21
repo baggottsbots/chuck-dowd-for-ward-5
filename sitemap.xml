@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://chuckforhhi5.com/</loc>
+    <lastmod>2026-09-21T16:20:33.526Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://chuckforhhi5.com/articles/9-11-reflections/</loc>
-    <lastmod>2026-09-21T14:10:40.218Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://chuckforhhi5.com/articles/california-911-crisis/</loc>
-    <lastmod>2026-09-21T14:10:33.746Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://chuckforhhi5.com/articles/first-responders/</loc>
-    <lastmod>2026-09-21T14:10:27.004Z</lastmod>
+    <lastmod>2026-09-21T16:20:25.503Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://chuckforhhi5.com/articles/</loc>
-    <lastmod>2026-09-21T14:10:01.104Z</lastmod>
+    <lastmod>2026-09-21T16:17:32.929Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://chuckforhhi5.com/</loc>
-    <lastmod>2026-09-21T14:09:54.894Z</lastmod>
+    <loc>https://chuckforhhi5.com/articles/california-911-crisis/</loc>
+    <lastmod>2026-09-21T16:16:48.623Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://chuckforhhi5.com/articles/first-responders/</loc>
+    <lastmod>2026-09-21T16:16:08.634Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
