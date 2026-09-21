@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://chuckforhhi5.com/articles/first-responders/</loc>
+    <lastmod>2026-09-21T16:20:58.579Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://chuckforhhi5.com/articles/california-911-crisis/</loc>
     <lastmod>2026-09-21T16:20:52.482Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,11 +23,6 @@
   <url>
     <loc>https://chuckforhhi5.com/</loc>
     <lastmod>2026-09-21T16:20:33.526Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://chuckforhhi5.com/articles/first-responders/</loc>
-    <lastmod>2026-09-21T16:16:08.634Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
